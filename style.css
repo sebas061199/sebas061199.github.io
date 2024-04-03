@@ -18,25 +18,24 @@
     color: #fff;
     text-decoration: none;
   }
+
   
-  /* Style voor de galerij */
-.restaurant-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Centreren van de kaarten */
-  gap: 20px; /* Ruimte tussen de kaarten */
+
+  .location-card {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
 }
 
-.restaurant-card {
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 300px;
+.location-card h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
-.restaurant-image {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
+.location-card p {
+    margin: 0;
+    margin-bottom: 5px;
 }
