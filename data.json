@@ -1,0 +1,14 @@
+{
+    "locaties": [
+        {
+            "name": "Café De Prins",
+            "address": "Hof 31, 3811CK Amersfoort",
+            "number": "1"
+        },
+        {
+            "name": "Marie Café Brasserie",
+            "address": "Utrechtseweg 76, 3818 EN Amersfoort",
+            "number": "2"
+        }
+    ]
+}
