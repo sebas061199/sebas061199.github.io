@@ -1,14 +1,21 @@
 {
     "locaties": [
         {
+            "number": "1",
             "name": "Café De Prins",
-            "address": "Hof 31, 3811CK Amersfoort",
-            "number": "1"
+            "address": "Hof 31, 3811CK Amersfoort"
+            
         },
         {
+            "number": "2",
             "name": "Marie Café Brasserie",
-            "address": "Utrechtseweg 76, 3818 EN Amersfoort",
-            "number": "2"
+            "address": "Utrechtseweg 76, 3818 EN Amersfoort"
+        },
+        {
+            "number": "3",
+            "name": "Boothill Saloon",
+            "address": "Krankeledenstraat 16, 3811 BN Amersfoort"
         }
+        
     ]
 }
