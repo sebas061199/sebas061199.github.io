@@ -10,7 +10,8 @@
         {
             "number": "2",
             "name": "Marie Café Brasserie",
-            "address": "Utrechtseweg 76, 3818 EN Amersfoort"
+            "address": "Utrechtseweg 76, 3818 EN Amersfoort",
+            "photo": "assets/marie.jpeg"
         },
         {
             "number": "3",
