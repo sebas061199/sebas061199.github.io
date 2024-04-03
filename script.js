@@ -16,3 +16,5 @@ fetch('data.json')
         googleMapsLink.setAttribute("onclick", "openInGoogleMaps('" + firstObjectData.name + "', '" + firstObjectData.address + "'); return false;");
     })
     .catch(error => console.error('Error fetching JSON: ', error));
+
+    
