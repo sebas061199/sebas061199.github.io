@@ -17,17 +17,19 @@
             "number": "3",
             "name": "Boothill Saloon",
             "address": "Krankeledenstraat 16, 3811 BN Amersfoort",
-            "photo": "boothill.jpg"
+            "photo": "assets/boothill.jpg"
         },
         {
             "number": "4",
             "name": "Café Bar De Kolkrijst",
-            "address": "Zevenhuizerstraat 151, 3828 PT Hoogland"
+            "address": "Zevenhuizerstraat 151, 3828 PT Hoogland",
+            "photo": "assets/de-kolk.jpg"
         },
         {
             "number": "5",
             "name": "Dikke Dirck",
-            "address": "Groenmarkt 8, 3811 CP Amersfoort"
+            "address": "Groenmarkt 8, 3811 CP Amersfoort",
+            "photo": "assets/dikke-dirck.jpg"
         },
         {
             "number": "6",
