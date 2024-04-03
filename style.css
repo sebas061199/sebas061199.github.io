@@ -19,23 +19,46 @@
     text-decoration: none;
   }
 
-  
+/* Stijlen voor de kaartcontainer */
+#location-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Stijlen voor de kaart */
+.location-card {
+  width: calc(33.33% - 20px);
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+/* Stijlen voor de inhoud van de locatiekaart */
+.location-card-content {
+  text-align: center;
+}
+
+/* Media query voor responsieve opmaak */
+@media screen and (max-width: 768px) {
+  #location-card-container {
+      flex-direction: column;
+      align-items: center;
+  }
 
   .location-card {
-    width: 300px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    background-color: #f9f9f9;
+    margin-top: 10px;  
+    width: 90%; 
+      margin-bottom: 20px;
+  }
 }
 
-.location-card h2 {
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-
-.location-card p {
-    margin: 0;
-    margin-bottom: 5px;
+footer {
+  max-height: auto;
+  text-align: center;
+  padding: 3px;
+  background-color: #FF2D00;
+  color: white;
 }

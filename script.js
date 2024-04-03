@@ -27,8 +27,7 @@ function createLocationCard(location) {
     // Vul de inhoud van de locatiekaart in
     locationCard.innerHTML = `
         <h2>${location.name}</h2>
-        <p><strong>Number:</strong> ${location.number}</p>
-        <p><strong>Address:</strong> ${location.address}</p>
+        <p>${location.address}</p>
     `;
 
     // Voeg de locatiekaart toe aan de kaartcontainer
