@@ -3,7 +3,8 @@
         {
             "number": "1",
             "name": "Café De Prins",
-            "address": "Hof 31, 3811CK Amersfoort"
+            "address": "Hof 31, 3811CK Amersfoort",
+            "photo": "assets/de-prins.png"
             
         },
         {
@@ -18,8 +19,8 @@
         },
         {
             "number": "4",
-            "name": "Marie Café Brasserie",
-            "address": "Utrechtseweg 76, 3818 EN Amersfoort"
+            "name": "Café Bar De Kolkrijst",
+            "address": "Zevenhuizerstraat 151, 3828 PT Hoogland"
         },
         {
             "number": "5",
@@ -90,6 +91,11 @@
             "number": "18",
             "name": "Curtis café",
             "address": "Hof 7, 3811 CJ Amersfoort"
+        },
+        {
+            "number": "19",
+            "name": "Biercafé De Dikke Koning",
+            "address": "Appelmarkt 18, 3811 CT Amersfoort"
         }
         
     ]

@@ -55,6 +55,26 @@
   }
 }
 
+.location-card img {
+  max-width: 100%; /* Afbeelding wordt geschaald om binnen de container te passen */
+  max-height: 200px; /* Optioneel: beperk de maximale hoogte van de afbeelding */
+  margin-bottom: 10px; /* Optioneel: voeg wat ruimte toe onder de afbeelding */
+}
+
+.location-card button {
+  background-color: #ff0000; /* Rode achtergrondkleur */
+  color: #ffffff; /* Witte tekstkleur */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.location-card button:hover {
+  background-color: #cc0000; /* Donkerder rode kleur wanneer de knop wordt gehoverd */
+}
+
 footer {
   max-height: auto;
   text-align: center;

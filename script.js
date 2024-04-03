@@ -1,9 +1,3 @@
-// Function to open Google Maps with specified name and address
-function openInGoogleMaps(name, address) {
-    var googleMapsURL = "https://www.google.com/maps?q=" + encodeURIComponent(name + ", " + address);
-    window.open(googleMapsURL, "_blank");
-}
-
 // Fetch JSON data from file
 fetch('data.json')
     .then(response => response.json())
@@ -27,7 +21,9 @@ function createLocationCard(location) {
     // Vul de inhoud van de locatiekaart in
     locationCard.innerHTML = `
         <h2>${location.name}</h2>
+        <img src="${location.photo}" alt="${location.name}" class="location-photo">
         <p>${location.address}</p>
+        <button onclick="openInGoogleMaps('${location.name}', '${location.address}')">Route</button>
     `;
 
     // Voeg de locatiekaart toe aan de kaartcontainer
@@ -49,4 +45,10 @@ function loadDataAndCreateLocationCards() {
 
 // Voer de functie uit om de JSON-gegevens te laden en locatiekaarten te maken wanneer de pagina geladen is
 document.addEventListener('DOMContentLoaded', loadDataAndCreateLocationCards);
+
+// Function to open Google Maps with specified name and address
+function openInGoogleMaps(name, address) {
+    var googleMapsURL = "https://www.google.com/maps?q=" + encodeURIComponent(name + ", " + address);
+    window.open(googleMapsURL, "_blank");
+}
 
