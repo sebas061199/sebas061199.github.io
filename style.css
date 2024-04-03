@@ -49,6 +49,16 @@
   }
 
   .location-card {
-      width: 80%; /* Breedte aanpassen voor betere leesbaarheid op mobiele apparaten */
+    margin-top: 10px;  
+    width: 90%; 
+      margin-bottom: 20px;
   }
+}
+
+footer {
+  max-height: auto;
+  text-align: center;
+  padding: 3px;
+  background-color: #FF2D00;
+  color: white;
 }
