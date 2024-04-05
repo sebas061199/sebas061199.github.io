@@ -1,38 +1,29 @@
 .navbar {
-    background-color: #FF2D00;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .navbar ul li {
-    display: inline;
-    margin: 0 5px;
+  background-color: #db0a13;
+  text-align: center;
+}
 
-  }
-  
-  .navbar ul li a {
-    display: inline-block;
-    padding: 10px 20px;
-    color: #fff;
-    text-decoration: none;
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start; /* Linker uitlijning */
+  align-items: center; /* Centreren verticaal */
+}
 
-  }
+.navbar ul li {
+  margin: 0 5px;
+}
 
-  .navbar ul li:last-child {
-    margin-right: 0; /* Verwijder marges van het laatste lijstitem */
-}  
+.navbar ul li a {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+}
 
-/* Stijlen voor de kaartcontainer */
+ 
 #location-card-container {
   display: flex;
   flex-wrap: wrap;
@@ -40,7 +31,6 @@
   gap: 20px;
 }
 
-/* Stijlen voor de kaart */
 .location-card {
   width: calc(33.33% - 20px);
   padding: 20px;
@@ -75,7 +65,7 @@
 }
 
 .location-card button {
-  background-color: #ff0000; /* Rode achtergrondkleur */
+  background-color: #db0a13; /* Rode achtergrondkleur */
   color: #ffffff; /* Witte tekstkleur */
   border: none;
   padding: 10px 20px;
@@ -85,16 +75,32 @@
 }
 
 .location-card button:hover {
-  background-color: #cc0000; /* Donkerder rode kleur wanneer de knop wordt gehoverd */
+  background-color: #db0a13; /* Donkerder rode kleur wanneer de knop wordt gehoverd */
 }
 
-footer {
-  background-color: #FF2D00;
+.footer {
+  background-color: #db0a13;
   max-height: auto;
   text-align: center;
   padding: 3px;
-  text-decoration: none;
   color: white;
 
+
+}
+
+.footer ul {
+  align-items: center;
+}
+
+.footer ul li {
+  list-style: none;
+  align-items: center;
+
+}
+
+.footer ul li a {
+  text-decoration: none;
+  color: white;
+  align-items: center;
 
 }
