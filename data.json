@@ -4,102 +4,121 @@
             "number": "1",
             "name": "Café De Prins",
             "address": "Hof 31, 3811CK Amersfoort",
-            "photo": "assets/de-prins.png"
+            "photo": "de-prins.png",
+            "description": "\"Gezellige kroeg met Nederlandse muziek\""
             
         },
         {
             "number": "2",
             "name": "Marie Café Brasserie",
             "address": "Utrechtseweg 76, 3818 EN Amersfoort",
-            "photo": "assets/marie.jpeg"
+            "photo": "marie.jpeg",
+            "description": "\"Franse keuken met goede wijnen\""
         },
         {
             "number": "3",
             "name": "Boothill Saloon",
             "address": "Krankeledenstraat 16, 3811 BN Amersfoort",
-            "photo": "assets/boothill.jpg"
+            "photo": "boothill.jpg",
+            "description": "\"Amerikaanse kroeg en Amerikaanse bieren\""
+
         },
         {
             "number": "4",
             "name": "Café Bar De Kolkrijst",
             "address": "Zevenhuizerstraat 151, 3828 PT Hoogland",
-            "photo": "assets/de-kolk.jpg"
+            "photo": "de-kolk.jpg",
+            "description": "\"Ouderwets gezellige kroeg\""
         },
         {
             "number": "5",
             "name": "Dikke Dirck",
             "address": "Groenmarkt 8, 3811 CP Amersfoort",
-            "photo": "assets/dikke-dirck.jpg"
+            "photo": "dikke-dirck.jpg"
         },
         {
             "number": "6",
             "name": "Tjommies Music Bar",
-            "address": "Lavendelstraat 13, 3811 CN Amersfoort"
+            "address": "Lavendelstraat 13, 3811 CN Amersfoort",
+            "photo": ""
         },
         {
             "number": "7",
             "name": "Lapart",
-            "address": "Hof 6, 3811 CJ Amersfoort"
+            "address": "Hof 6, 3811 CJ Amersfoort",
+            "photo": ""
         },
         {
             "number": "8",
             "name": "Restaurant Habibi",
-            "address": "Krommestraat 45, 3811 CB Amersfoort"
+            "address": "Krommestraat 45, 3811 CB Amersfoort",
+            "photo": ""
         },
         {
             "number": "9",
             "name": "Café Marktzicht",
-            "address": "Lieve Vrouwekerkhof 2, 3811 BS Amersfoort"
+            "address": "Lieve Vrouwekerkhof 2, 3811 BS Amersfoort",
+            "photo": ""
         },
         {
             "number": "10",
             "name": "De Professor Amersfoort",
-            "address": "Hof 16, 3811 CJ Amersfoort"
+            "address": "Hof 16, 3811 CJ Amersfoort",
+            "photo": ""
         },
         {
             "number": "11",
             "name": "Alberts",
-            "address": "Hof 5, 3811 CJ Amersfoort"
+            "address": "Hof 5, 3811 CJ Amersfoort",
+            "photo": ""
         },
         {
             "number": "12",
             "name": "Café Stu",
-            "address": "Scherbierstraat 3A, 3811 EA Amersfoort"
+            "address": "Scherbierstraat 3A, 3811 EA Amersfoort",
+            "photo": ""
         },
         {
             "number": "13",
             "name": "Muziekcafé Pitchers",
-            "address": "Groenmarkt 7, 3811 CP Amersfoort"
+            "address": "Groenmarkt 7, 3811 CP Amersfoort",
+            "photo": ""
         },
         {
             "number": "14",
             "name": "Long John's Pub & Hotel",
-            "address": "Krankeledenstraat 22, 3811 BN Amersfoort"
+            "address": "Krankeledenstraat 22, 3811 BN Amersfoort",
+            "photo": ""
         },
         {
             "number": "15",
             "name": "Zoldertje Pool & Game Café",
-            "address": "Langegracht 45, 3811 BW Amersfoort"
+            "address": "Langegracht 45, 3811 BW Amersfoort",
+            "photo": ""
         },
         {
             "number": "16",
             "name": "Tres Tapasbar",
-            "address": "Stadsring 69, 3811 HN Amersfoort"
+            "address": "Stadsring 69, 3811 HN Amersfoort",
+            "photo": ""
         },
         {
             "number": "17",
             "name": "Café Miles",
-            "address": "Hof 25-26, 3811 CK Amersfoort"
+            "address": "Hof 25-26, 3811 CK Amersfoort",
+            "photo": ""
         },
         {
             "number": "18",
             "name": "Curtis café",
-            "address": "Hof 7, 3811 CJ Amersfoort"
+            "address": "Hof 7, 3811 CJ Amersfoort",
+            "photo": ""
         },
         {
             "number": "19",
             "name": "Biercafé De Dikke Koning",
-            "address": "Appelmarkt 18, 3811 CT Amersfoort"
+            "address": "Appelmarkt 18, 3811 CT Amersfoort",
+            "photo": ""
         }
         
     ]
