@@ -1,29 +1,9 @@
-.navbar {
-  background-color: #db0a13;
+.logo-header h1{
+  color: white;
   text-align: center;
+  background-color: #db0a13;
 }
 
-.navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: flex-start; /* Linker uitlijning */
-  align-items: center; /* Centreren verticaal */
-}
-
-.navbar ul li {
-  margin: 0 5px;
-}
-
-.navbar ul li a {
-  display: inline-block;
-  padding: 10px 20px;
-  color: #fff;
-  text-decoration: none;
-}
-
- 
 #location-card-container {
   display: flex;
   flex-wrap: wrap;
@@ -47,14 +27,14 @@
 /* Media query voor responsieve opmaak */
 @media screen and (max-width: 768px) {
   #location-card-container {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .location-card {
     margin-top: 10px;  
     width: 90%; 
-      margin-bottom: 20px;
+    margin-bottom: 20px;
   }
 }
 
@@ -78,29 +58,43 @@
   background-color: #db0a13; /* Donkerder rode kleur wanneer de knop wordt gehoverd */
 }
 
-.footer {
+body {
+  margin-bottom: 80px; /* Voeg extra ruimte onderaan toe voor de tabbalk */
+  margin-top: auto;
+}
+
+.tabbar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 kolommen met gelijke breedte */
+  gap: 10px; /* Ruimte tussen de iconen */
+  justify-items: center; /* Centreren van de iconen binnen de kolommen */
   background-color: #db0a13;
-  max-height: auto;
-  text-align: center;
-  padding: 3px;
-  color: white;
-
-
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000; /* Zorg ervoor dat de tabbar bovenaan blijft */
 }
 
-.footer ul {
-  align-items: center;
+.tabbar-container {
+  padding-bottom: 50px; /* Voeg ruimte toe aan de onderkant van de inhoud om de tabbar zichtbaar te houden */
 }
 
-.footer ul li {
-  list-style: none;
-  align-items: center;
-
-}
-
-.footer ul li a {
+.tab-button {
+  color: white; /* Witte tekstkleur voor de iconen */
+  text-align: center; /* Tekst centreren */
+  display: flex; /* Gebruik flexbox voor de uitlijning */
+  flex-direction: column; /* Stapel de items in een kolom */
+  align-items: center; /* Centreren van de items */
   text-decoration: none;
-  color: white;
-  align-items: center;
+}
 
+.tab-button svg {
+  width: 24px; /* Breedte van de iconen aanpassen */
+  height: 24px; /* Hoogte van de iconen aanpassen */
+}
+
+.tab-button span {
+  font-size: 10px;
+  color: white; /* Kleur van de tekst */
 }
