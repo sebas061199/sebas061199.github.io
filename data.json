@@ -20,7 +20,7 @@
             "name": "Boothill Saloon",
             "address": "Krankeledenstraat 16, 3811 BN Amersfoort",
             "photo": "boothill.jpg",
-            "description": "\"Amerikaanse kroeg en Amerikaanse bieren\""
+            "description": "\"Amerikaanse kroeg met Amerikaanse bieren\""
 
         },
         {
@@ -34,31 +34,36 @@
             "number": "5",
             "name": "Dikke Dirck",
             "address": "Groenmarkt 8, 3811 CP Amersfoort",
-            "photo": "dikke-dirck.jpg"
+            "photo": "dikke-dirck.jpg",
+            "description": "\"Bourgondisch Genieten\""
         },
         {
             "number": "6",
             "name": "Tjommies Music Bar",
             "address": "Lavendelstraat 13, 3811 CN Amersfoort",
-            "photo": ""
+            "photo": "tjommies.png",
+            "description": "\"Cocktails en goede muziek\""
         },
         {
             "number": "7",
             "name": "Lapart",
             "address": "Hof 6, 3811 CJ Amersfoort",
-            "photo": ""
+            "photo": "lapart.png",
+            "description":"\"Een Heel Lapart Café\""
         },
         {
             "number": "8",
             "name": "Restaurant Habibi",
             "address": "Krommestraat 45, 3811 CB Amersfoort",
-            "photo": ""
+            "photo": "habibi.jpg",
+            "description": "\"Heerlijke Arabische tapas met een moderne twist\""
         },
         {
             "number": "9",
             "name": "Café Marktzicht",
             "address": "Lieve Vrouwekerkhof 2, 3811 BS Amersfoort",
-            "photo": ""
+            "photo": "marktzicht.jpg",
+            "description": "\"Een wijnbar én speciaalbiercafé in één!\""
         },
         {
             "number": "10",
@@ -119,7 +124,14 @@
             "name": "Biercafé De Dikke Koning",
             "address": "Appelmarkt 18, 3811 CT Amersfoort",
             "photo": ""
-        }
+        },
+        {
+            "number": "20",
+            "name": "Anne's Streed Food & Bar",
+            "address": "Lieve Vrouwestraat 14, 3811 BR Amersfoort",
+            "photo": "annes-bar.jpg",
+            "description": "\"All day streetfood\""
+          }
         
     ]
 }
