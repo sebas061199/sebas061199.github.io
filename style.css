@@ -40,11 +40,7 @@ body {
   gap: 20px;
   padding-top: 30px; /* Voeg padding toe aan de bovenkant */
   padding-bottom: 80px; /* Voeg padding toe aan de onderkant */
-  background-image: url('./assets/toren.jpg');
-  background-size: cover; /* Pas deze regel aan */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* Voorkomt scrollen van de achtergrond */
+
 }
 
 
