@@ -98,3 +98,69 @@ body {
   font-size: 10px;
   color: white; /* Kleur van de tekst */
 }
+/* Alleen deel van de CSS-code is bijgewerkt voor de stijl van één box */
+
+/* Alleen deel van de CSS-code is bijgewerkt voor responsiviteit en de plaatsing van de box in het midden */
+
+/* CSS om de container in het midden te plaatsen en de slotmachine te stijlen */
+
+.slot-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#app {
+  /* Stijlen voor de slotmachine */
+  background: #1a2b45;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center de slotmachine verticaal */
+  border-radius: 5px;
+}
+
+.doors {
+  display: flex;
+  justify-content: center; /* Center de deur horizontaal */
+}
+
+.door {
+  background: #fafafa;
+  width: 200px;
+  height: 110px;
+  overflow: hidden;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.boxes {
+  /* Stijlen voor één box */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  max-width: 90%; /* Maximale breedte van de box */
+  width: 100%; /* Breedte van de box */
+  height: 110px; /* Hoogte van de box */
+}
+
+.box {
+  display: inline-block;
+  text-align: center; /* Plaats het item in het midden van de box */
+  width: 100%; /* Maak het item 100% van de breedte van de box */
+}
+
+.buttons {
+  margin: 1rem 0 2rem 0;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin: 0 0.2rem;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
