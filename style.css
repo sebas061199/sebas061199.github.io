@@ -65,8 +65,9 @@ body {
   }
 
   body {
-    background-size: contain; /* Voor mobiele apparaten, probeer 'contain' in plaats van 'cover' */
+    background-size: cover; /* Voor mobiele apparaten, probeer 'contain' in plaats van 'cover' */
     background-repeat: no-repeat; /* Voorkom herhaling van de achtergrond op mobiel */
+    background-attachment: fixed;
   }
 
   #app {
