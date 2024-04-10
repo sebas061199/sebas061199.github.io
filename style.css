@@ -5,16 +5,14 @@ body {
   justify-content: center;
   min-height: 100vh;
   margin: 0;
-  
-}
-
-#body-container {
   background-image: url('./assets/toren.jpg');
-  background-size: contain;
+  background-size: cover; /* Pas deze regel aan */
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed; /* Voorkomt scrollen van de achtergrond */
+  
 }
+
 
 .logo-header h1 {
   color: white;
@@ -59,6 +57,12 @@ body {
   #location-card-container {
     flex-direction: column;
     align-items: center;
+  }
+  .doors {
+    width: 90%; /* Bij kleinere schermen de breedte aanpassen */
+    flex-direction: column; /* Verticale opmaak bij kleinere schermen */
+    justify-content: center; /* Centreren van de inhoud bij kleinere schermen */
+    align-items: center; /* Centreren van de inhoud bij kleinere schermen */
   }
 
   .location-card {
@@ -124,17 +128,6 @@ body {
   color: white;
 }
 
-.slot-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  border-radius: 5px;
-  border-color: #db0a13;
- 
-}
 
 #app {
   display: flex;
@@ -143,15 +136,24 @@ body {
   border-radius: 5px;
   border-color: black;
   padding-bottom: 50px; /* Voeg extra ruimte onderaan toe voor de buttons */
+  position: relative; /* Zorg ervoor dat buttons zich relatief positioneren aan #app */
 }
 
 .doors {
-  display: flex;
-  justify-content: center;
+  width: 90%; /* Breedte instellen op 90% van de beschikbare ruimte */
+  max-width: 800px; /* Maximale breedte instellen om te voorkomen dat het te breed wordt */
+  padding: 20px; /* Padding instellen zoals bij location-card */
+  border: 1px solid #ccc; /* Rand instellen zoals bij location-card */
+  border-radius: 5px; /* Border-radius instellen zoals bij location-card */
+  background-color: rgba(255, 255, 255, 0.6); /* Achtergrondkleur instellen zoals bij location-card */
+  margin: 20px; /* Marge toevoegen voor ruimte tussen .doors-elementen */
+  display: flex; /* Flexbox gebruiken voor layout */
+  justify-content: space-between; /* Horizontaal verdelen van de inhoud */
+  align-items: center; /* Verticaal centreren van de inhoud */
 }
 
 .door {
-  background: #fafafa;
+  background-color: rgba(255, 255, 255, 0.6); /* Pas de achtergrondkleur aan met een alpha-waarde */
   width: 200px;
   height: 110px;
   overflow: hidden;
@@ -163,7 +165,7 @@ body {
 .boxes {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; /* Centreren van de elementen verticaal */
   font-size: 3rem;
   max-width: 90%;
   width: 100%;
@@ -171,16 +173,24 @@ body {
 }
 
 .box {
+  background-color: white;
   display: inline-block;
   text-align: center;
   width: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
+
+
 .buttons {
+  display: flex; /* Zorg ervoor dat buttons een flex-container worden */
   justify-content: center;
   position: absolute;
   bottom: 10px;
   transform: translateX(-50%);
+  width: 100%; /* Maak de buttons 100% breedte binnen #app */
+  max-width: 500px; /* Stel een maximale breedte in voor de buttons */
 }
 
 button {
