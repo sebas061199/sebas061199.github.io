@@ -6,13 +6,9 @@ body {
   min-height: 100vh;
   margin: 0;
   background-image: url('./assets/toren.jpg');
-  background-size: contain; /* Pas deze regel aan */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* Voorkomt scrollen van de achtergrond */
-  
+  background-size: cover; /* Standaard voor desktop */
+  background-attachment: fixed; /* Houd de achtergrondafbeelding op zijn plaats, zelfs tijdens het scrollen */
 }
-
 
 .logo-header  {
   position: fixed;
@@ -66,6 +62,11 @@ body {
     flex-direction: column; /* Verticale opmaak bij kleinere schermen */
     justify-content: center; /* Centreren van de inhoud bij kleinere schermen */
     align-items: center; /* Centreren van de inhoud bij kleinere schermen */
+  }
+
+  body {
+    background-size: contain; /* Voor mobiele apparaten, probeer 'contain' in plaats van 'cover' */
+    background-repeat: no-repeat; /* Voorkom herhaling van de achtergrond op mobiel */
   }
 
   #app {
