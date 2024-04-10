@@ -6,7 +6,7 @@ body {
   min-height: 100vh;
   margin: 0;
   background-image: url('./assets/toren.jpg');
-  background-size: cover; /* Pas deze regel aan */
+  background-size: contain; /* Pas deze regel aan */
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed; /* Voorkomt scrollen van de achtergrond */
