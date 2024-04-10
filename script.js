@@ -64,3 +64,129 @@ function openInGoogleMaps(name, address) {
         encodeURIComponent(name + ", " + address);
     window.open(googleMapsURL, "_blank");
 }
+
+(function () {
+    const defaultItem = '❓'; // Standaard item om weer te geven bij het resetten
+    const doors = document.querySelectorAll('.door');
+    const playButton = document.querySelector('#spinner');
+    const resetButton = document.querySelector('#reseter');
+    
+    // Verberg de resetknop bij het laden van de pagina
+    resetButton.style.display = 'none';
+  
+    playButton.addEventListener('click', spin);
+    resetButton.addEventListener('click', reset);
+  
+    function init(firstInit = true, groups = 1, duration = 1, resetMode = false) {
+      for (const door of doors) {
+        if (firstInit) {
+          door.dataset.spinned = '0';
+        } else if (door.dataset.spinned === '1') {
+          return;
+        }
+  
+        const boxes = door.querySelector('.boxes');
+        const boxesClone = boxes.cloneNode(false);
+  
+        if (!firstInit) {
+          const pool = [];
+          const items = [
+            '🍭',
+            '❌',
+            '⛄️',
+            '🦄',
+            '🍌',
+            '💩',
+            '👻',
+            '😻',
+            '💵',
+            '🤡',    
+            '🦖',
+            '🍎',
+            '😂',
+            '🖕',
+          ];
+          const arr = [];
+          for (let n = 0; n < (groups > 0 ? groups : 1); n++) {
+            arr.push(...items);
+          }
+          pool.push(...shuffle(arr));
+  
+          boxesClone.addEventListener(
+            'transitionstart',
+            function () {
+              door.dataset.spinned = '1';
+              this.querySelector('.box').style.filter = 'blur(1px)';
+              playButton.style.display = 'none'; // Verberg de play knop tijdens het spinnen
+              resetButton.style.display = 'none'; // Verberg de reset knop tijdens het spinnen
+            },
+            { once: true }
+          );
+  
+          boxesClone.addEventListener(
+            'transitionend',
+            function () {
+              this.querySelector('.box').style.filter = 'blur(0)';
+              setTimeout(() => {
+                resetButton.style.display = 'block'; // Toon de reset knop na 4 seconden
+              }, 4000);
+            }
+          );
+  
+          const randomItem = resetMode ? defaultItem : pool[Math.floor(Math.random() * pool.length)];
+          const box = document.createElement('div');
+          box.classList.add('box');
+          box.textContent = randomItem;
+          boxesClone.appendChild(box);
+        } else {
+          const box = document.createElement('div');
+          box.classList.add('box');
+          box.textContent = defaultItem;
+          boxesClone.appendChild(box);
+        }
+        
+        boxesClone.style.transitionDuration = `${duration > 0 ? duration : 1}s`;
+        door.replaceChild(boxesClone, boxes);
+      }
+    }
+  
+    async function spin() {
+      resetButton.style.display = 'none'; // Verberg de reset knop voordat de animatie begint
+      playButton.style.display = 'none'; // Verberg de play knop tijdens het spinnen
+      setTimeout(() => {
+        resetButton.style.display = 'block'; // Toon de reset knop na 4 seconden
+      }, 3000);
+      for (let i = 0; i < 30; i++) {
+        setTimeout(() => {
+          init(false, 1, 4);
+        }, i * 100);
+      }
+    }
+  
+    function reset() {
+      init(false, 1, 1, true); // Reset de slotmachine door alleen het standaarditem weer te geven
+      playButton.style.display = 'block'; // Toon de play knop na het resetten
+      resetButton.style.display = 'none'; // Verberg de reset knop na het resetten
+    }
+  
+    function shuffle([...arr]) {
+      let m = arr.length;
+      while (m) {
+        const i = Math.floor(Math.random() * m--);
+        [arr[m], arr[i]] = [arr[i], arr[m]];
+      }
+      return arr;
+    }
+  
+    init(true); // Initialiseer de slotmachine bij het laden van de pagina met resetMode ingesteld op true
+  })();
+  
+  
+  
+  
+  
+
+
+
+
+
