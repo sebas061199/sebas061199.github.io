@@ -10,7 +10,32 @@ body {
   background-attachment: fixed; /* Houd de achtergrondafbeelding op zijn plaats, zelfs tijdens het scrollen */
 }
 
-.logo-header  {
+.weatherData-container {
+  position: absolute; /* Absoluut positioneren */
+  top: 40px; /* Plaats het onder de .logo-header */
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.weatherData {
+  color: black;
+  font-size: 25px;
+  display: flex; /* Flexbox gebruiken */
+  align-items: center; /* Verticaal centreren */
+}
+
+.weatherData svg {
+  max-width: 50px;
+  max-height: 50px;
+  margin-right: 10px;
+}
+
+
+.logo-header {
   position: fixed;
   color: white;
   text-align: left;
