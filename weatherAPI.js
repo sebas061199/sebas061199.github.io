@@ -14,6 +14,7 @@ async function fetchWeatherData(city) {
     }
 }
 
+
 // Example usage:
 const city = "Amersfoort";
 fetchWeatherData(city)
@@ -58,11 +59,16 @@ fetchWeatherData(city)
           </svg>
           `
         }
-        if (conditionText === 'Plaatselijke regen in de omgeving') {
+        if (conditionText === 'Normale of zware sneeuw in gebied met onweer') {
+            const weatherIcon = document.getElementById('weatherIcon');
+            weatherIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M120 352l-24 48M136 432l-16 32M400 352l-24 48M416 432l-16 32M208 304l-16 96h48v80l80-112h-48l16-64M404.33 152.89H392.2C384.71 84.85 326.14 32 256 32a136.39 136.39 0 00-128.63 90.67h-4.57c-49.94 0-90.8 40.8-90.8 90.66h0C32 263.2 72.86 304 122.8 304h281.53C446 304 480 270 480 228.44h0c0-41.55-34-75.55-75.67-75.55z"/></svg>`
+        }
+        if (conditionText === 'Normale regen') {
             const weatherIcon = document.getElementById('weatherIcon');
             weatherIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" style="max-width: 50px; max-height: 50px; margin-right: 10px;" viewBox="0 0 512 512"><path d="M114.61 162.85A16.07 16.07 0 00128 149.6C140.09 76.17 193.63 32 256 32c57.93 0 96.62 37.75 112.2 77.74a15.84 15.84 0 0012.2 9.87c50 8.15 91.6 41.54 91.6 99.59 0 59.4-48.6 100.8-108 100.8H130c-49.5 0-90-24.7-90-79.2 0-48.47 38.67-72.22 74.61-77.95z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M144 384l-32 48M224 384l-64 96M304 384l-32 48M384 384l-64 96"/></svg>`
         }
         
+
 
 
     })
