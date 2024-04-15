@@ -1,6 +1,6 @@
 async function fetchWeatherData(city) {
     const apiKey = '05b0d0e9ba624593a30134856241104';
-    const apiUrl = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&aqi=no&lang=nl`;
+    const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&aqi=no&lang=nl`;
 
     try {
         const response = await fetch(apiUrl);
