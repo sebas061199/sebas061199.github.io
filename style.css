@@ -13,7 +13,6 @@ body {
 .weatherData-container {
   position: absolute; /* Absoluut positioneren */
   top: 40px; /* Plaats het onder de .logo-header */
-  left: 0;
   width: 100%;
   padding: 20px;
   border: 1px solid #ccc;
@@ -21,17 +20,17 @@ body {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-.weatherData {
-  color: black;
-  font-size: 25px;
-  display: flex; /* Flexbox gebruiken */
-  align-items: center; /* Verticaal centreren */
+.weatherIcon {
+  position: relative; /* Absoluut positioneren */
 }
 
-.weatherData svg {
-  max-width: 50px;
-  max-height: 50px;
-  margin-right: 10px;
+.weatherData {
+  position: absolute; /* Absoluut positioneren */
+  left: 80px; /* Naast weatherIcon */
+  top: 50%; /* Verticaal gecentreerd */
+  transform: translateY(-50%); /* Correctie om verticaal te centreren */
+  color: black;
+  font-size: 25px;
 }
 
 
