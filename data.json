@@ -190,6 +190,48 @@
             "address": "Hof 13A, 3811 CJ Amersfoort",
             "photo": "celik.jpg",
             "description": "\"Turkse en Mediteriaanse specialiteiten\""
+          },
+          {
+            "number": "28",
+            "name": "Stadscafé Amersfoort",
+            "address": "Lieve Vrouwekerkhof 3, 3811 BS Amersfoort",
+            "photo": "stadscafe.jpg",
+            "description": "\"Lunch, borrelen en dineren in hartje Amersfoort\""
+          },
+          {
+            "number": "29",
+            "name": "Charlie's Burger",
+            "address": "Krankeledenstraat 18, 3811 BN Amersfoort",
+            "photo": "charlies.jpg",
+            "description": "\"Burgers & hotdogs op z'n Amerikaans\""
+          },
+          {
+            "number": "30",
+            "name": "Hete Kolen",
+            "address": "Krankeledenstraat 7, 3811 BN Amersfoort",
+            "photo": "hete-kolen.jpg",
+            "description": "\"No Nonsense Bistro\""
+          },
+          {
+            "number": "31",
+            "name": "Madonna",
+            "address": "Krommestraat 32, 3811 CC Amersfoort",
+            "photo": "madonna.jpg",
+            "description": "\"All-day hotspot\""
+          },
+          {
+            "number": "32",
+            "name": "Grand Café de Kromme",
+            "address": "Krommestraat 46, 3811 CD Amersfoort",
+            "photo": "kromme.jpeg",
+            "description": "\"Goed eten, geweldige wijnen en gezelligheid\""
+          },
+          {
+            "number": "33",
+            "name": "BKK Thai",
+            "address": "Kamp 10, 3811 AR Amersfoort",
+            "photo": "bkk-thai.jpg",
+            "description": "\"Authentieke Thaise keuken\""
           }
         
     ]
