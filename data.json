@@ -69,61 +69,71 @@
             "number": "10",
             "name": "De Professor Amersfoort",
             "address": "Hof 16, 3811 CJ Amersfoort",
-            "photo": ""
+            "photo": "de-prof.jpg",
+            "description": "\"Voor de lekkerste Cocktails & Bites\""
         },
         {
             "number": "11",
             "name": "Alberts",
             "address": "Hof 5, 3811 CJ Amersfoort",
-            "photo": ""
+            "photo": "alberts.jpg",
+            "description": "\"Restaurant met eigen karakter\""
         },
         {
             "number": "12",
             "name": "Café Stu",
             "address": "Scherbierstraat 3A, 3811 EA Amersfoort",
-            "photo": ""
+            "photo": "stu.jpg",
+            "description": "\"Voor de leukste vintage, kunst en livemuziek\""
         },
         {
             "number": "13",
             "name": "Muziekcafé Pitchers",
             "address": "Groenmarkt 7, 3811 CP Amersfoort",
-            "photo": ""
+            "photo": "pitchers.png",
+            "description": "\"Het leukste sportcafé\""
         },
         {
             "number": "14",
             "name": "Long John's Pub & Hotel",
             "address": "Krankeledenstraat 22, 3811 BN Amersfoort",
-            "photo": ""
+            "photo": "long-john.jpg",
+            "description": "\"All day Long John's\""
         },
         {
             "number": "15",
             "name": "Zoldertje Pool & Game Café",
             "address": "Langegracht 45, 3811 BW Amersfoort",
-            "photo": ""
+            "photo": "zoldertje.jpg",
+            "description": "\"Oudste poolcafé van Amersfoort\""
         },
         {
             "number": "16",
             "name": "Tres Tapasbar",
             "address": "Stadsring 69, 3811 HN Amersfoort",
-            "photo": ""
+            "photo": "tres.jpg",
+            "description": "\"Onbeperkt genieten van wereldtapas\""
         },
         {
             "number": "17",
             "name": "Café Miles",
             "address": "Hof 25-26, 3811 CK Amersfoort",
-            "photo": ""
+            "photo": "miles.jpg",
+            "description":"\"Het livemuziekcafé van Amersfoort\""
         },
         {
             "number": "18",
             "name": "Curtis café",
             "address": "Hof 7, 3811 CJ Amersfoort",
-            "photo": ""
+            "photo": "curtis.jpg",
+            "description":"\"Het gezelligste café van Amersfoort\""
         },
         {
             "number": "19",
             "name": "Biercafé De Dikke Koning",
             "address": "Appelmarkt 18, 3811 CT Amersfoort",
-            "photo": ""
+            "photo": "koning.jpg",
+            "description":"\"Gezelligste biercafé van Amersfoort\""
         },
         {
             "number": "20",
@@ -131,6 +141,55 @@
             "address": "Lieve Vrouwestraat 14, 3811 BR Amersfoort",
             "photo": "annes-bar.jpg",
             "description": "\"All day streetfood\""
+          },
+          {
+            "number": "21",
+            "name": "Restaurant Gaudi's",
+            "address": "Hof 36, 3811 CK Amersfoort",
+            "photo": "gaudi.jpg",
+            "description": "\"Sfeervolle Spaanse ambiance\""
+          },
+          {
+            "number": "22",
+            "name": "Resaurant Brasa",
+            "address": "Lavendelstraat 4, 3811 CN Amersfoort",
+            "photo": "brasa.jpg",
+            "description": "\"Authentiek Spaans eten en drinken in hartje Amersfoort\""
+          },
+          {
+            "number": "23",
+            "name": "Grandcafé Hemels",
+            "address": "Langestraat 63, 3811 AC Amersfoort",
+            "photo": "hemels.jpg",
+            "description": "\"Voor eeen gezellig groepsdiner, lunch en borrel\""
+          },
+          {
+            "number": "24",
+            "name": "Nul33",
+            "address": "Langestraat 76, 3811 AJ Amersfoort",
+            "photo": "nul33.jpg",
+            "description": "\"Eten, drinken & genieten\""
+          },
+          {
+            "number": "25",
+            "name": "Coffee Corazon",
+            "address": "Krommestraat 18, 3811 CC Amersfoort",
+            "photo": "corazon.jpg",
+            "description": "\"De beste koffie en huisgemaakte taart\""
+          },
+          {
+            "number": "26",
+            "name": "Gastrobar Amersfoort",
+            "address": "Hof 8, 3811 CJ Amersfoort",
+            "photo": "gastro.jpg",
+            "description": "\"Genieten van heerlijke gerechten en geweldige wijnen\""
+          },
+          {
+            "number": "27",
+            "name": "Restaurant Celik",
+            "address": "Hof 13A, 3811 CJ Amersfoort",
+            "photo": "celik.jpg",
+            "description": "\"Turkse en Mediteriaanse specialiteiten\""
           }
         
     ]

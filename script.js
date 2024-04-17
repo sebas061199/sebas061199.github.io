@@ -99,10 +99,7 @@
     const selectedNumber = doors[doors.length - 1].querySelector('.box').textContent; // Krijg het nummer van de laatste deur
     displayNumberModal(selectedNumber); // Toon de modal met het geselecteerde nummer
   }
-  
-  
-
-  
+    
   function reset() {
     init(false, 1, 1, true); // Reset de slotmachine door alleen het standaarditem weer te geven
     playButton.style.display = 'block'; // Toon de play knop na het resetten
