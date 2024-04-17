@@ -260,6 +260,20 @@
             "address": "Groenmarkt 3, 5, 3811 CP Amersfoort",
             "photo": "dolle-diva.jpg",
             "description": "\"Dé over-the-top eetbar in Amersfoort\""
+          },
+          {
+            "number": "38",
+            "name": "Eetkamer van Dam",
+            "address": "Krommestraat 55, 3811 CB Amersfoort",
+            "photo": "vandam.jpeg",
+            "description": "\"Lage landen cuisine in het leukste straatje van Amersfoort\""
+          },
+          {
+            "number": "39",
+            "name": "Petite Marie",
+            "address": "",
+            "photo": "",
+            "description": "\"Coming soon!\""
           }
           
         
