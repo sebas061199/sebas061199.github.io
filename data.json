@@ -232,7 +232,50 @@
             "address": "Kamp 10, 3811 AR Amersfoort",
             "photo": "bkk-thai.jpg",
             "description": "\"Authentieke Thaise keuken\""
+          },
+          {
+            "number": "34",
+            "name": "Stadsbrouwerij De Drie Ringen",
+            "address": "Kleine Spui 18, 3811 BE Amersfoort",
+            "photo": "ringen.jpg",
+            "description": "\"Ambachtelijke stadsbrouwerij\""
+          },
+          {
+            "number": "35",
+            "name": "Rock city Brewpub",
+            "address": "Mijnbouwweg 15, 3812 RT Amersfoort",
+            "photo": "rock-city.jpg",
+            "description": "\"Een smaakvol avontuur\""
+          },
+          {
+            "number": "36",
+            "name": "Café J&D",
+            "address": "Hof 18, 3811 CJ Amersfoort",
+            "photo": "jd.png",
+            "description": "\"Een warm welkom en gemoedelijke sfeer\""
+          },
+          {
+            "number": "37",
+            "name": "Dolle Diva",
+            "address": "Groenmarkt 3, 5, 3811 CP Amersfoort",
+            "photo": "dolle-diva.jpg",
+            "description": "\"Dé over-the-top eetbar in Amersfoort\""
+          },
+          {
+            "number": "38",
+            "name": "Eetkamer van Dam",
+            "address": "Krommestraat 55, 3811 CB Amersfoort",
+            "photo": "vandam.jpeg",
+            "description": "\"Lage landen cuisine in het leukste straatje van Amersfoort\""
+          },
+          {
+            "number": "39",
+            "name": "Petite Marie",
+            "address": "",
+            "photo": "",
+            "description": "\"Coming soon!\""
           }
+          
         
     ]
 }
