@@ -119,30 +119,75 @@
   }
 
   // Display modal met het geselecteerde nummer
-  function displayNumberModal(number) {
-    var modal = document.getElementById("myModal");
-    var modalContent = document.querySelector(".modal-content");
-  
-    // Maak een nieuw div-element voor de modale inhoud met het nummer
-    var numberDiv = document.createElement("div");
-    numberDiv.textContent = "Geselecteerd nummer: " + number;
-  
-    // Voeg een sluitknop toe aan de modale inhoud
-    var closeButton = document.createElement("span");
-    closeButton.classList.add("close");
-    closeButton.textContent = "×";
-    closeButton.addEventListener("click", function() {
-      modal.style.display = "none"; // Sluit de modal bij klik op de sluitknop
-    });
-    
-    // Voeg de sluitknop en modale inhoud toe aan de modale container
-    modalContent.innerHTML = ''; // Wis de modale inhoud
-    modalContent.appendChild(closeButton); // Voeg de sluitknop toe
-    modalContent.appendChild(numberDiv); // Voeg de modale inhoud toe
-  
-    // Toon modal
-    modal.style.display = "block";
+  function displayNumberModal(selectedNumber) {
+    fetch('data.json')
+        .then((response) => response.json())
+        .then((json) => {
+            // Zoek de locatie die overeenkomt met het doorgegeven nummer
+            const location = json.locaties.find((locatie) => locatie.number === selectedNumber);
+            if (location) {
+                // Maak en toon de locatiekaart als er een overeenkomstige locatie is gevonden
+                const locationCard = createLocationCard(location);
+                showModal(locationCard);
+            } else {
+                console.log('Geen overeenkomstige locatie gevonden voor nummer:', selectedNumber);
+            }
+        })
+        .catch((error) => console.error('Error fetching data:', error));
   }
+
+  function openInGoogleMaps(name, address) {
+    var googleMapsURL =
+        "https://www.google.com/maps?q=" +
+        encodeURIComponent(name + ", " + address);
+    window.open(googleMapsURL, "_blank");
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    fetch("data.json")
+        .then((response) => response.json())
+        .then((json) => {
+            json.locaties.forEach((location) => {
+                createLocationCard(location);
+            });
+        })
+        .catch((error) => console.error("Error fetching data:", error));
+  });
+
+  function createLocationCard(location) {
+    var locationCard = document.createElement("div");
+    locationCard.classList.add("location-card");
+    var photoSrc = location.photo !== '' ? 'assets/' + location.photo : 'assets/no-image.png';
+    locationCard.innerHTML = `
+        <h2>${location.name}</h2>
+        <img src="${photoSrc}" alt="${location.name}" class="location-photo">
+        ${location.description ? `<h5>${location.description}</h5>` : ""}
+        <p>${location.address}</p>
+        <button class="googleMapsLink">Route</button>
+    `;
+
+    // Voeg een klikgebeurtenis toe aan de knop voor het openen van Google Maps
+    var googleMapsLink = locationCard.querySelector(".googleMapsLink");
+    googleMapsLink.addEventListener("click", function (event) {
+        openInGoogleMaps(location.name, location.address);
+        event.preventDefault(); // Voorkom standaardgedraging van de link
+        showModal(locationCard);
+    });
+
+    return locationCard;
+  }
+
+  function showModal(content) {
+    // Voeg de locatiekaart toe aan de modale inhoud
+    const modalContent = document.querySelector('.modal-content');
+    modalContent.innerHTML = ''; // Clear modal content
+    modalContent.appendChild(content);
+
+    // Toon de modal
+    const modal = document.getElementById('myModal');
+    modal.style.display = 'block';
+  }
+
 
   init(true); // Initialiseer de slotmachine bij het laden van de pagina met resetMode ingesteld op true
 })();
