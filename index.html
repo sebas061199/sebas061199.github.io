@@ -7,6 +7,7 @@
   <title>Amersfoorts genieten! Alpha v1</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="popUp.css" />
   <link rel="icon" href="./assets/logo-amersfoort-rood.ico" type="image/x-icon" />
 </head>
 
@@ -18,7 +19,13 @@
     <div id="weatherIcon" class="weatherIcon"></div>
     <div id="weatherTemp" class="weatherData"></div>
   </div>
+  </div>
+  <button id="openModalBtn">Toon pop-up</button>
 
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+    </div>
   </div>
   <div id="app">
     <div class="doors">
