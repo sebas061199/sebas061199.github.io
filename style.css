@@ -5,9 +5,9 @@ body {
   justify-content: center;
   min-height: 100vh;
   margin: 0;
-  background-image: url('./assets/toren.jpg');
-  background-size: cover; /* Standaard voor desktop */
-  background-attachment: fixed; /* Houd de achtergrondafbeelding op zijn plaats, zelfs tijdens het scrollen */
+  background-image: url("./assets/toren.jpg");
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .weatherData-container {
@@ -33,7 +33,6 @@ body {
   font-size: 25px;
 }
 
-
 .logo-header {
   position: fixed;
   color: white;
@@ -41,35 +40,38 @@ body {
   justify-items: center;
   padding-left: 20px;
   background-color: #db0a13;
+  background-size: cover;
+  background-attachment: fixed;
   top: 0;
   left: 0;
-  width: 100%; /* Neemt de hele breedte van het scherm in */
-  height: 40px; /* Pas aan naar gewenste hoogte */
+  width: 100%;
+  height: 40px;
   z-index: 1000;
+  margin-top: 0; /* Verwijder de bovenmarge */
 }
-
-.logo-header.no-fixed {
-  position: static;
-}
-
 
 #location-card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  padding-top: 30px; /* Voeg padding toe aan de bovenkant */
+  padding-top: 60px; /* Voeg padding toe aan de bovenkant */
   padding-bottom: 80px; /* Voeg padding toe aan de onderkant */
-
 }
 
-
 .location-card {
+  position: relative;
   width: calc(33.33% - 20px);
+  height: 480px;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.6); /* Pas de achtergrondkleur aan met een alpha-waarde */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.6
+  ); /* Pas de achtergrondkleur aan met een alpha-waarde */
 }
 
 .location-card-content {
@@ -77,6 +79,10 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  .logo-header {
+    position: fixed; /* Verander de positie naar static op mobiele apparaten */
+  }
+
   #location-card-container {
     flex-direction: column;
     align-items: center;
@@ -105,7 +111,6 @@ body {
     width: 100vw; /* Maak de breedte 100% van de viewport breedte */
     max-width: 100%; /* Voorkom dat het element breder wordt dan de viewport */
   }
-  
 
   .location-card {
     margin-top: 10px;
@@ -128,6 +133,10 @@ body {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  position: absolute; /* Maak de positie van de Route button absoluut binnen de locatiekaart */
+  bottom: 20px; /* Pas de gewenste afstand vanaf de onderkant aan */
+  left: 60px;
+  transform: translateX(-50%); /* Centreer de knop */
 }
 
 .location-card button:hover {
@@ -170,7 +179,6 @@ body {
   color: white;
 }
 
-
 #app {
   display: flex;
   flex-direction: column;
@@ -188,7 +196,12 @@ body {
   padding: 20px; /* Padding instellen zoals bij location-card */
   border: 1px solid #ccc; /* Rand instellen zoals bij location-card */
   border-radius: 5px; /* Border-radius instellen zoals bij location-card */
-  background-color: rgba(255, 255, 255, 0.6); /* Achtergrondkleur instellen zoals bij location-card */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.6
+  ); /* Achtergrondkleur instellen zoals bij location-card */
   margin: 20px auto; /* Marge instellen op auto om het centraal te positioneren */
   display: flex; /* Flexbox gebruiken voor layout */
   justify-content: space-between; /* Horizontaal verdelen van de inhoud */
@@ -214,7 +227,6 @@ body {
   height: 110px;
   border: 1px solid black;
   border-radius: 5px;
-
 }
 
 .box {
@@ -237,8 +249,6 @@ body {
   max-width: 500px; /* Stel een maximale breedte in voor de buttons */
 }
 
-
-
 button {
   cursor: pointer;
   font-size: 1.2rem;
@@ -250,5 +260,4 @@ button {
   background-color: #db0a13;
   margin-top: 40px; /* Meer ruimte aan de bovenkant van de buttons */
   position: sticky;
-
 }
