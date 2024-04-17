@@ -178,15 +178,32 @@
   }
 
   function showModal(content) {
-    // Voeg de locatiekaart toe aan de modale inhoud
+    // Maak een element voor de sluitknop
+    const closeButton = document.createElement("span");
+    closeButton.classList.add("close");
+    closeButton.textContent = "×"; // Tekst voor de sluitknop, bijvoorbeeld 'X'
+
+    // Voeg een event listener toe aan de sluitknop om de modal te sluiten wanneer erop wordt geklikt
+    closeButton.addEventListener("click", function() {
+        closeModal();
+    });
+
+    // Voeg de sluitknop toe aan de modale inhoud
     const modalContent = document.querySelector('.modal-content');
-    modalContent.innerHTML = ''; // Clear modal content
-    modalContent.appendChild(content);
+    modalContent.innerHTML = ''; // Leeg de modale inhoud
+    modalContent.appendChild(closeButton); // Voeg de sluitknop toe
+    modalContent.appendChild(content); // Voeg de inhoud van de modal toe
 
     // Toon de modal
     const modal = document.getElementById('myModal');
     modal.style.display = 'block';
-  }
+}
+
+function closeModal() {
+    // Sluit de modal
+    const modal = document.getElementById('myModal');
+    modal.style.display = 'none';
+}
 
 
   init(true); // Initialiseer de slotmachine bij het laden van de pagina met resetMode ingesteld op true
