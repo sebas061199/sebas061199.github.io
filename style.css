@@ -1,14 +1,156 @@
+/* Tweak to change the look and feel */
+:root {
+  --button-background: #db0a13;
+  --button-color: white;
+  
+  --dropdown-highlight: #db0a13;
+  --dropdown-width: 160px;
+  --dropdown-background: white;
+  --dropdown-color: black;
+  --dropdown-item-height: 50px; /* Nieuwe variabele voor de hoogte van de lijstitems */
+}
+
+/* Center the planet */
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "dropdown";
   min-height: 100vh;
   margin: 0;
   background-image: url("./assets/toren.jpg");
   background-size: cover;
   background-attachment: fixed;
 }
+
+
+/* Dropdown styles */
+.dropdown {
+  grid-area: dropdown;
+  position: fixed; /* Zorg ervoor dat de dropdown gefixeerd blijft op het scherm */
+  top: 40px; /* Plaats de dropdown onder de logo-header */
+  left: 0; /* Zet de dropdown links uitgelijnd */
+  background-color: rgba(255, 255, 255, 0.6); /* Voeg een achtergrondkleur toe */
+  width: 100%; /* Laat de dropdown de volledige breedte van het scherm innemen */
+  z-index: 1000; /* Verhoog de z-index om boven de location cards te staan */
+  border-top: black;
+  border-width: 100px;
+}
+
+.dropdown summary {
+  list-style: none;
+  list-style-type: none;
+  border-color: black;
+  background-color: hsl(357, 65%, 52%);
+  color: white;
+  height: var(--dropdown-item-height); /* Vaste hoogte voor het dropdown summary */
+  width: 100%; /* Knop moet volledige breedte op kleinere schermen hebben */
+  display: flex; /* Maak het summary een flex-container */
+  align-items: center; /* Verticaal centreren van de inhoud */
+  padding-left: 10px; /* Voeg padding toe aan de linkerkant van de tekst */
+  border-width: 100px;
+}
+
+
+.dropdown summary:focus {
+  outline: none;
+  background-color: #db0a13; /* Voeg de focusstijl toe */
+  color: white; /* Voeg de focusstijl toe */
+  border-top: black;
+  border-width: 100px;
+}
+
+.dropdown ul {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: var(--dropdown-width);
+  left: 0; /* Aanpassing: dropdown links uitlijnen */
+  box-sizing: border-box;
+  z-index: 1001; /* Zorg ervoor dat dropdown-content boven de location cards staat */
+  background: var(--dropdown-background);
+  border-radius: 6px;
+  list-style: none;
+  top: var(--dropdown-item-height); /* Afstand van het dropdown summary */
+}
+
+.dropdown ul li {
+  padding: 0;
+  margin: 0;
+  height: var(--dropdown-item-height); /* Vaste hoogte voor de lijstitems */
+}
+
+.dropdown ul li a:link,
+.dropdown ul li a:visited {
+  display: block; /* Maak links blokken om ze onder elkaar te laten staan */
+  padding: 10px 0.8rem;
+  width: 100%;
+  box-sizing: border-box;
+  color: var(--dropdown-color);
+  text-decoration: none;
+}
+
+.dropdown ul li a:hover {
+  background-color: var(--dropdown-highlight);
+  color: var(--dropdown-background);
+}
+
+/* Dropdown triangle */
+.dropdown ul::before {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -10px;
+  left: 50%;
+  margin-left: -10px;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent var(--dropdown-background) transparent;
+}
+
+/* Close the dropdown with outside clicks */
+.dropdown > summary::before {
+  display: none;
+}
+
+.dropdown[open] > summary::before {
+  content: ' ';
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 998; /* Zorg ervoor dat dropdown boven de logo-header staat */
+}
+
+/* Responsive aanpassingen */
+@media screen and (max-width: 768px) {
+  .dropdown {
+      width: 100%; /* Volledige breedte op kleinere schermen */
+  }
+
+  .dropdown ul {
+      width: 100%; /* Volledige breedte op kleinere schermen */
+      left: 0; /* Dropdown moet vanaf links beginnen */
+      top: auto; /* Geen afstand van boven af */
+      margin-top: 10px; /* Ruimte tussen knop en dropdown */
+  }
+
+  .dropdown ul::before {
+      display: none; /* Verwijder driehoekje op kleinere schermen */
+  }
+
+  .dropdown summary {
+      width: 100%; /* Knop moet volledige breedte op kleinere schermen hebben */
+  }
+}
+
+.modal {
+  z-index: 1002; /* Zorg ervoor dat de modal boven de dropdown staat */
+}
+
 
 .weatherData-container {
   position: absolute; /* Absoluut positioneren */
@@ -34,6 +176,7 @@ body {
 }
 
 .logo-header {
+  grid-area: header;
   position: fixed;
   color: white;
   text-align: left;
@@ -47,7 +190,6 @@ body {
   width: 100%;
   height: 40px;
   z-index: 1000;
-  margin-top: 0; /* Verwijder de bovenmarge */
 }
 
 #location-card-container {
@@ -55,7 +197,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  padding-top: 60px; /* Voeg padding toe aan de bovenkant */
+  padding-top: 120px; /* Voeg extra ruimte toe aan de bovenkant */
   padding-bottom: 80px; /* Voeg padding toe aan de onderkant */
 }
 
@@ -137,6 +279,7 @@ body {
   bottom: 20px; /* Pas de gewenste afstand vanaf de onderkant aan */
   left: 60px;
   transform: translateX(-50%); /* Centreer de knop */
+  z-index: 998;
 }
 
 .location-card button:hover {
@@ -182,14 +325,17 @@ body {
 #app {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   border-radius: 5px;
   border-color: black;
-  padding-bottom: 50px; /* Voeg extra ruimte onderaan toe voor de buttons */
-  position: relative; /* Zorg ervoor dat buttons zich relatief positioneren aan #app */
-  width: 100vw; /* Maak de breedte 100% van de viewport breedte */
-  max-width: 100%; /* Voorkom dat het element breder wordt dan de viewport */
+  padding-bottom: 50px;
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  height: auto; /* Verwijder de vaste hoogte en laat de hoogte automatisch aanpassen aan de inhoud */
 }
+
 
 .doors {
   width: 90%; /* Breedte instellen op 90% van de beschikbare ruimte */
@@ -258,6 +404,7 @@ button {
   padding: 10px 15px;
   color: white;
   background-color: #db0a13;
-  margin-top: 40px; /* Meer ruimte aan de bovenkant van de buttons */
-  position: sticky;
+  margin-top: 20px; /* Verlaag de bovenmarge om de knop dichter bij de inhoud te brengen */
+  z-index: 1001; /* Zorg ervoor dat de knop boven andere elementen ligt */
+  position: relative; /* Behoud de positie van de knop binnen zijn container */
 }

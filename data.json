@@ -310,6 +310,14 @@
           "photo": "",
           "description": "\"Coming soon!\"",
           "category": "restaurant"
+      },
+      {
+          "number": "40",
+          "name": "Café Thuis",
+          "address": "Lavendelstraat 9, 3811 CN Amersfoort",
+          "photo": "thuis.jpg",
+          "description": "\"De karaoke bar van Amersfoort\"",
+          "category": "uitgaan"
       }
   ]
 }
