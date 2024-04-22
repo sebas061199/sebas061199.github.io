@@ -1,9 +1,9 @@
 /* Tweak to change the look and feel */
 :root {
-  --button-background: #db0a13;
+  --button-background: #ccc;
   --button-color: white;
   
-  --dropdown-highlight: #db0a13;
+  --dropdown-highlight: #ccc;
   --dropdown-width: 160px;
   --dropdown-background: white;
   --dropdown-color: black;
@@ -27,22 +27,22 @@ body {
 /* Dropdown styles */
 .dropdown {
   grid-area: dropdown;
-  position: fixed; /* Zorg ervoor dat de dropdown gefixeerd blijft op het scherm */
-  top: 40px; /* Plaats de dropdown onder de logo-header */
-  left: 0; /* Zet de dropdown links uitgelijnd */
-  background-color: rgba(255, 255, 255, 0.6); /* Voeg een achtergrondkleur toe */
-  width: 100%; /* Laat de dropdown de volledige breedte van het scherm innemen */
-  z-index: 1000; /* Verhoog de z-index om boven de location cards te staan */
-  border-top: black;
-  border-width: 100px;
+  position: fixed;
+  top: 40px;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  z-index: 1000;
+  border-top: 2px solid black; /* Toevoegen van zwarte border aan de bovenkant */
 }
+
 
 .dropdown summary {
   list-style: none;
   list-style-type: none;
   border-color: black;
-  background-color: hsl(357, 65%, 52%);
-  color: white;
+  background-color: #ccc;
+  color: black;
   height: var(--dropdown-item-height); /* Vaste hoogte voor het dropdown summary */
   width: 100%; /* Knop moet volledige breedte op kleinere schermen hebben */
   display: flex; /* Maak het summary een flex-container */
@@ -54,8 +54,8 @@ body {
 
 .dropdown summary:focus {
   outline: none;
-  background-color: #db0a13; /* Voeg de focusstijl toe */
-  color: white; /* Voeg de focusstijl toe */
+  background-color: #ccc; /* Voeg de focusstijl toe */
+  color: black; /* Voeg de focusstijl toe */
   border-top: black;
   border-width: 100px;
 }
@@ -127,6 +127,10 @@ body {
 
 /* Responsive aanpassingen */
 @media screen and (max-width: 768px) {
+  .doors {
+    top: 50%; /* Plaats het in het midden van het scherm */
+    transform: translateY(-50%); /* Centreren verticaal */
+  }
   .dropdown {
       width: 100%; /* Volledige breedte op kleinere schermen */
   }
@@ -147,20 +151,22 @@ body {
   }
 }
 
-.modal {
+.modal-content {
   z-index: 1002; /* Zorg ervoor dat de modal boven de dropdown staat */
 }
 
 
 .weatherData-container {
-  position: absolute; /* Absoluut positioneren */
-  top: 40px; /* Plaats het onder de .logo-header */
+  position: absolute;
+  top: 80px; /* Plaats het 100px onder de bovenkant van het scherm */
   width: 100%;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.6);
 }
+
+
 
 .weatherIcon {
   position: relative; /* Absoluut positioneren */
@@ -220,7 +226,23 @@ body {
   text-align: center;
 }
 
+@media screen and (min-width: 768px) {
+  .doors {
+    top: calc(40% + 20px); /* Plaats het 100px onder het midden van het scherm */
+    transform: translateY(-50%); /* Centreren verticaal */
+  }
+  .buttons {
+    bottom: calc(50% + 50px); /* Plaats de knoppen 50px boven het midden van het scherm */
+    transform: translateY(50%); /* Centreren verticaal */
+  }
+}
+
 @media screen and (max-width: 768px) {
+  .buttons {
+    bottom: 50%; /* Plaats de knoppen in het midden van het scherm */
+    transform: translateY(50%); /* Centreren verticaal */
+  }
+
   .logo-header {
     position: fixed; /* Verander de positie naar static op mobiele apparaten */
   }
@@ -230,11 +252,19 @@ body {
     align-items: center;
   }
   .doors {
-    width: 90%; /* Bij kleinere schermen de breedte aanpassen */
-    flex-direction: column; /* Verticale opmaak bij kleinere schermen */
-    justify-content: center; /* Centreren van de inhoud bij kleinere schermen */
-    align-items: center; /* Centreren van de inhoud bij kleinere schermen */
+    width: 90%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 100px; /* Plaats het 150px onder de bovenkant van het scherm */
   }
+  
 
   body {
     background-size: cover; /* Voor mobiele apparaten, probeer 'contain' in plaats van 'cover' */
@@ -242,17 +272,20 @@ body {
     background-attachment: fixed;
   }
 
-  #app {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 5px;
-    border-color: black;
-    padding-bottom: 50px; /* Voeg extra ruimte onderaan toe voor de buttons */
-    position: relative; /* Zorg ervoor dat buttons zich relatief positioneren aan #app */
-    width: 100vw; /* Maak de breedte 100% van de viewport breedte */
-    max-width: 100%; /* Voorkom dat het element breder wordt dan de viewport */
-  }
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border-color: black;
+  padding-bottom: 50px;
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  height: auto;
+  top: 80px; /* Plaats het 80px onder de bovenkant van het scherm */
+}
 
   .location-card {
     margin-top: 10px;
