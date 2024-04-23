@@ -1,0 +1,17 @@
+{
+    "events": [
+        {
+            "id" : "1",
+            "name": "Into The Woods",
+            "location" : "Openluchttheater Amersfoort",
+            "description" : "\"Thuisfront NK kaakschaatsen\"",
+            "duration": ["2024-09-20", "2024-09-21"]
+        },
+        {
+            "id" : "2",
+            "name": "Amesfoortse Pracht",
+            "location" : "Openluchttheater Amersfoort",
+            "duration": ["2024-09-22"]
+        }
+    ]
+}
