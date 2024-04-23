@@ -151,9 +151,7 @@ body {
   }
 }
 
-.modal-content {
-  z-index: 1002; /* Zorg ervoor dat de modal boven de dropdown staat */
-}
+
 
 
 .weatherData-container {
@@ -209,7 +207,7 @@ body {
 
 .location-card {
   position: relative;
-  width: calc(33.33% - 20px);
+  width: calc(25% - 20px);
   height: 480px;
   padding: 20px;
   border: 1px solid #ccc;
@@ -226,6 +224,21 @@ body {
   text-align: center;
 }
 
+.modal-content .location-card {
+  width: 100%;
+  max-width: calc(80% - 20px);
+  height: 480px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.modal-content .location-card-content {
+  text-align: center;
+}
+
+
 @media screen and (min-width: 768px) {
   .doors {
     top: calc(40% + 20px); /* Plaats het 100px onder het midden van het scherm */
@@ -238,6 +251,11 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  .modal-content {
+    width: 90%; /* Maak de breedte 90% van de beschikbare viewport breedte op mobiele apparaten */
+    max-width: none; /* Verwijder de maximale breedte op mobiele apparaten */
+  }
+
   .buttons {
     bottom: 50%; /* Plaats de knoppen in het midden van het scherm */
     transform: translateY(50%); /* Centreren verticaal */
@@ -298,6 +316,7 @@ body {
   max-width: 100%;
   max-height: 200px;
   margin-bottom: 10px;
+  justify-content: center;
 }
 
 .location-card button {
