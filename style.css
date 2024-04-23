@@ -23,7 +23,6 @@ body {
   background-attachment: fixed;
 }
 
-
 /* Dropdown styles */
 .dropdown {
   grid-area: dropdown;
@@ -35,7 +34,6 @@ body {
   z-index: 1000;
   border-top: 2px solid black; /* Toevoegen van zwarte border aan de bovenkant */
 }
-
 
 .dropdown summary {
   list-style: none;
@@ -50,7 +48,6 @@ body {
   padding-left: 10px; /* Voeg padding toe aan de linkerkant van de tekst */
   border-width: 100px;
 }
-
 
 .dropdown summary:focus {
   outline: none;
@@ -151,9 +148,6 @@ body {
   }
 }
 
-
-
-
 .weatherData-container {
   position: absolute;
   top: 80px; /* Plaats het 100px onder de bovenkant van het scherm */
@@ -163,8 +157,6 @@ body {
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.6);
 }
-
-
 
 .weatherIcon {
   position: relative; /* Absoluut positioneren */
@@ -196,35 +188,10 @@ body {
   z-index: 1000;
 }
 
-#location-card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding-top: 120px; /* Voeg extra ruimte toe aan de bovenkant */
-  padding-bottom: 80px; /* Voeg padding toe aan de onderkant */
-}
+/* Grid-layout voor location-card */
 
-.location-card {
-  position: relative;
-  width: calc(25% - 20px);
-  height: 480px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.6
-  ); /* Pas de achtergrondkleur aan met een alpha-waarde */
-}
 
-.location-card-content {
-  text-align: center;
-}
-
-.modal-content .location-card {
+.modal-content {
   width: 60%;
   max-width: calc(80% - 20px);
   height: 480px;
@@ -234,14 +201,13 @@ body {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-.modal-content .location-card-content {
+.modal-content  {
   text-align: center;
 }
 
-
 @media screen and (min-width: 768px) {
-  .location-card {
-    width: calc(20% + 20px);
+  .modal-content {
+    width: 80%;
     margin-bottom: 20px;
   }
   .doors {
@@ -255,97 +221,15 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .location-card {
-    margin-top: 10px;
-    width: 90%;
-    margin-bottom: 20px;
-  }
-
-  .modal-content {
-    width: 90%; /* Maak de breedte 90% van de beschikbare viewport breedte op mobiele apparaten */
-    max-width: none; /* Verwijder de maximale breedte op mobiele apparaten */
-  }
-
-  .buttons {
-    bottom: 50%; /* Plaats de knoppen in het midden van het scherm */
-    transform: translateY(50%); /* Centreren verticaal */
-  }
-
-  .logo-header {
-    position: fixed; /* Verander de positie naar static op mobiele apparaten */
-  }
-
-  #location-card-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .doors {
-    width: 90%;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.6);
-    margin: 20px auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    top: 100px; /* Plaats het 150px onder de bovenkant van het scherm */
-  }
-  
-
   body {
     background-size: cover; /* Voor mobiele apparaten, probeer 'contain' in plaats van 'cover' */
     background-repeat: no-repeat; /* Voorkom herhaling van de achtergrond op mobiel */
     background-attachment: fixed;
   }
-
-#app {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  border-color: black;
-  padding-bottom: 50px;
-  position: relative;
-  width: 100vw;
-  max-width: 100%;
-  height: auto;
-  top: 80px; /* Plaats het 80px onder de bovenkant van het scherm */
-}
-
-  .location-card {
-    margin-top: 10px;
-    
+  .modal-content {
+    width: 80%;
     margin-bottom: 20px;
   }
-}
-
-.location-card img {
-  max-width: 100%;
-  max-height: 200px;
-  margin-bottom: 10px;
-  justify-content: center;
-}
-
-.location-card button {
-  background-color: #db0a13;
-  color: #ffffff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  position: absolute; /* Maak de positie van de Route button absoluut binnen de locatiekaart */
-  bottom: 20px; /* Pas de gewenste afstand vanaf de onderkant aan */
-  left: 60px;
-  transform: translateX(-50%); /* Centreer de knop */
-  z-index: 998;
-}
-
-.location-card button:hover {
-  background-color: lightgray;
 }
 
 .tabbar {
@@ -395,9 +279,9 @@ body {
   position: relative;
   width: 100vw;
   max-width: 100%;
-  height: auto; /* Verwijder de vaste hoogte en laat de hoogte automatisch aanpassen aan de inhoud */
+  height: auto;
+  top: 80px; /* Plaats het 80px onder de bovenkant van het scherm */
 }
-
 
 .doors {
   width: 90%; /* Breedte instellen op 90% van de beschikbare ruimte */
@@ -446,18 +330,18 @@ body {
 }
 
 .buttons {
-  display: flex; /* Zorg ervoor dat buttons een flex-container worden */
+  display: flex;
   justify-content: center; /* Horizontaal centreren van de inhoud */
-  align-items: center; /* Verticaal centreren van de inhoud */
-  position: absolute; /* Absoluut gepositioneerd binnen .doors */
+  align-items: flex-end; /* Verticaal onderaan uitlijnen van de inhoud */
+  position: absolute;
   bottom: 10px;
-  left: 50%; /* Links uitlijnen met de helft van de breedte van .doors */
+  left: 50%; /* In het midden van de locatiekaart */
   transform: translateX(-50%); /* Horizontaal centreren */
-  width: 100%; /* Maak de buttons 100% breedte binnen .doors */
-  max-width: 500px; /* Stel een maximale breedte in voor de buttons */
+  width: auto; /* Breedte aanpassen aan de inhoud */
+  max-width: none; /* Geen maximale breedte instellen */
 }
 
-button {
+.buttons button {
   cursor: pointer;
   font-size: 1.2rem;
   margin: 0 0.2rem;
@@ -465,8 +349,8 @@ button {
   border-radius: 5px;
   padding: 10px 15px;
   color: white;
-  background-color: #db0a13;
-  margin-top: 20px; /* Verlaag de bovenmarge om de knop dichter bij de inhoud te brengen */
-  z-index: 1001; /* Zorg ervoor dat de knop boven andere elementen ligt */
-  position: relative; /* Behoud de positie van de knop binnen zijn container */
+  background-color: #db0a13; /* Kleur instellen zoals bij de .location-card button */
+  z-index: 998;
 }
+
+

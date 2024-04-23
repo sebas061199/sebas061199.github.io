@@ -26,7 +26,7 @@
   float: left;
   font-size: 28px;
   font-weight: bold;
-  padding-left: 380px;
+  padding-left: 500px;
 }
 
 
@@ -41,14 +41,13 @@
   .modal-content {
     width: 95%; /* Maak de breedte 95% van de beschikbare viewport breedte op mobiele apparaten */
     max-width: none; /* Verwijder de maximale breedte op mobiele apparaten */
-    margin: 10px auto; /* Marge instellen om het centraal te positioneren */
   }
   .close {
     color: black;
     float: left;
     font-size: 28px;
     font-weight: bold;
-    padding-left: 380px;
+    padding-left: 300px;
   }
   
 }

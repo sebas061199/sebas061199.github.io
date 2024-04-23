@@ -11,7 +11,8 @@
             "id" : "2",
             "name": "Amesfoortse Pracht",
             "location" : "Openluchttheater Amersfoort",
-            "duration": ["2024-09-22"]
+            "description" : "\"Oergezellig uitbrakken\"",
+            "duration": ["2024-09-22"] 
         }
     ]
 }
