@@ -4,6 +4,7 @@
   const playButton = document.querySelector('#spinner');
   const resetButton = document.querySelector('#reseter');
   let spinningDoors = 0; // Houdt bij hoeveel deuren momenteel aan het spinnen zijn
+  let confettiInterval; // Variabele om het interval van het confetti-effect bij te houden
 
   // Verberg de resetknop bij het laden van de pagina
   resetButton.style.display = 'none';
@@ -194,14 +195,62 @@
     // Toon de modal
     const modal = document.getElementById('myModal');
     modal.style.display = 'block';
+
+    // Start het confetti-effect
+    startConfetti();
+}
+
+function startConfetti() {
+    const duration = 15 * 1000,
+    animationEnd = Date.now() + duration,
+    defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+    function randomInRange(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+
+    const interval = setInterval(function() {
+        const timeLeft = animationEnd - Date.now();
+
+        if (timeLeft <= 0) {
+            clearInterval(interval);
+            return;
+        }
+
+        const particleCount = 50 * (timeLeft / duration);
+
+        // since particles fall down, start a bit higher than random
+        confetti(
+            Object.assign({}, defaults, {
+            particleCount,
+            origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+            })
+        );
+        confetti(
+            Object.assign({}, defaults, {
+            particleCount,
+            origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+            })
+        );
+    }, 250);
+    
+    // Return het interval zodat het toegankelijk is buiten deze functie
+    return interval;
+}
+
+function stopConfetti() {
+  clearInterval(interval);
 }
 
 function closeModal() {
-    // Sluit de modal
-    const modal = document.getElementById('myModal');
-    modal.style.display = 'none';
+  // Sluit de modal
+  const modal = document.getElementById('myModal');
+  const confetti = document.getElementById('confetti')
+  modal.style.display = 'none';
+  confetti.style.display = 'none'
 }
 
 
-  init(true); // Initialiseer de slotmachine bij het laden van de pagina met resetMode ingesteld op true
+init(true); // Initialiseer de slotmachine bij het laden van de pagina met resetMode ingesteld op true
+
 })();
