@@ -121,7 +121,7 @@ body {
 /* Responsive aanpassingen */
 @media screen and (max-width: 768px) {
   .doors {
-    transform: translateY(-50%); /* Centreren verticaal */
+    transform: translateY(-100%); /* Centreren verticaal */
   }
   .dropdown {
       width: 100%; /* Volledige breedte op kleinere schermen */
@@ -183,8 +183,15 @@ body {
   z-index: 1000;
 }
 
-/* Grid-layout voor location-card */
 
+.confetti-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999; /* Zorg ervoor dat de confetti bovenop alles wordt weergegeven */
+}
 
 .modal-content {
   width: 60%;
@@ -206,7 +213,7 @@ body {
     margin-bottom: 20px;
   }
   .doors {
-    transform: translateY(-50%); /* Centreren verticaal */
+    transform: translateY(-150%); /* Centreren verticaal */
     max-width: 60%;
   }
   .buttons {
