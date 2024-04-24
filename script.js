@@ -84,23 +84,23 @@
   async function spin() {
     resetButton.style.display = 'none'; // Verberg de reset knop voordat het spinnen begint
     playButton.style.display = 'none'; // Verberg de play knop tijdens het spinnen
-  
+
     // Voer het spinnen uit met een maximale duur van 3 seconden
     const startTime = performance.now(); // Tijdstip waarop het spinnen begint
     let elapsedTime = 0; // Verstreken tijd tijdens het spinnen
-  
+
     while (elapsedTime < 3000) {
       init(false, 1, 4); // Voer het spinnen uit
       await new Promise(resolve => setTimeout(resolve, 100)); // Wacht 100 ms voordat de volgende iteratie begint
       elapsedTime = performance.now() - startTime; // Bereken de verstreken tijd
     }
-  
+
     // Na het spinnen, toon de resetknop en haal het geselecteerde nummer op
     resetButton.style.display = 'block'; // Toon de reset knop na het spinnen
     const selectedNumber = doors[doors.length - 1].querySelector('.box').textContent; // Krijg het nummer van de laatste deur
     displayNumberModal(selectedNumber); // Toon de modal met het geselecteerde nummer
   }
-    
+
   function reset() {
     init(false, 1, 1, true); // Reset de slotmachine door alleen het standaarditem weer te geven
     playButton.style.display = 'block'; // Toon de play knop na het resetten
@@ -119,37 +119,37 @@
   // Display modal met het geselecteerde nummer
   function displayNumberModal(selectedNumber) {
     fetch('data.json')
-        .then((response) => response.json())
-        .then((json) => {
-            // Zoek de locatie die overeenkomt met het doorgegeven nummer
-            const location = json.locaties.find((locatie) => locatie.number === selectedNumber);
-            if (location) {
-                // Maak en toon de locatiekaart als er een overeenkomstige locatie is gevonden
-                const locationCard = createLocationCard(location);
-                showModal(locationCard);
-            } else {
-                console.log('Geen overeenkomstige locatie gevonden voor nummer:', selectedNumber);
-            }
-        })
-        .catch((error) => console.error('Error fetching data:', error));
+      .then((response) => response.json())
+      .then((json) => {
+        // Zoek de locatie die overeenkomt met het doorgegeven nummer
+        const location = json.locaties.find((locatie) => locatie.number === selectedNumber);
+        if (location) {
+          // Maak en toon de locatiekaart als er een overeenkomstige locatie is gevonden
+          const locationCard = createLocationCard(location);
+          showModal(locationCard);
+        } else {
+          console.log('Geen overeenkomstige locatie gevonden voor nummer:', selectedNumber);
+        }
+      })
+      .catch((error) => console.error('Error fetching data:', error));
   }
 
   function openInGoogleMaps(name, address) {
     var googleMapsURL =
-        "https://www.google.com/maps?q=" +
-        encodeURIComponent(name + ", " + address);
+      "https://www.google.com/maps?q=" +
+      encodeURIComponent(name + ", " + address);
     window.open(googleMapsURL, "_blank");
   }
 
   document.addEventListener("DOMContentLoaded", function () {
     fetch("data.json")
-        .then((response) => response.json())
-        .then((json) => {
-            json.locaties.forEach((location) => {
-                createLocationCard(location);
-            });
-        })
-        .catch((error) => console.error("Error fetching data:", error));
+      .then((response) => response.json())
+      .then((json) => {
+        json.locaties.forEach((location) => {
+          createLocationCard(location);
+        });
+      })
+      .catch((error) => console.error("Error fetching data:", error));
   });
 
   function createLocationCard(location) {
@@ -167,9 +167,9 @@
     // Voeg een klikgebeurtenis toe aan de knop voor het openen van Google Maps
     var googleMapsLink = locationCard.querySelector(".googleMapsLink");
     googleMapsLink.addEventListener("click", function (event) {
-        openInGoogleMaps(location.name, location.address);
-        event.preventDefault(); // Voorkom standaardgedraging van de link
-        showModal(locationCard);
+      openInGoogleMaps(location.name, location.address);
+      event.preventDefault(); // Voorkom standaardgedraging van de link
+      showModal(locationCard);
     });
 
     return locationCard;
@@ -182,8 +182,8 @@
     closeButton.textContent = "×"; // Tekst voor de sluitknop, bijvoorbeeld 'X'
 
     // Voeg een event listener toe aan de sluitknop om de modal te sluiten wanneer erop wordt geklikt
-    closeButton.addEventListener("click", function() {
-        closeModal();
+    closeButton.addEventListener("click", function () {
+      closeModal();
     });
 
     // Voeg de sluitknop toe aan de modale inhoud
@@ -196,61 +196,17 @@
     const modal = document.getElementById('myModal');
     modal.style.display = 'block';
 
-    // Start het confetti-effect
-    startConfetti();
-}
-
-function startConfetti() {
-    const duration = 15 * 1000,
-    animationEnd = Date.now() + duration,
-    defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
-
-    function randomInRange(min, max) {
-        return Math.random() * (max - min) + min;
-    }
-
-    const interval = setInterval(function() {
-        const timeLeft = animationEnd - Date.now();
-
-        if (timeLeft <= 0) {
-            clearInterval(interval);
-            return;
-        }
-
-        const particleCount = 50 * (timeLeft / duration);
-
-        // since particles fall down, start a bit higher than random
-        confetti(
-            Object.assign({}, defaults, {
-            particleCount,
-            origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
-            })
-        );
-        confetti(
-            Object.assign({}, defaults, {
-            particleCount,
-            origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
-            })
-        );
-    }, 250);
-    
-    // Return het interval zodat het toegankelijk is buiten deze functie
-    return interval;
-}
-
-function stopConfetti() {
-  clearInterval(interval);
-}
-
-function closeModal() {
-  // Sluit de modal
-  const modal = document.getElementById('myModal');
-  const confetti = document.getElementById('confetti')
-  modal.style.display = 'none';
-  confetti.style.display = 'none'
-}
+    // Start het confetti-effect binnen de confetti-container
+  }
 
 
-init(true); // Initialiseer de slotmachine bij het laden van de pagina met resetMode ingesteld op true
+  function closeModal() {
+    // Sluit de modal
+    const modal = document.getElementById('myModal');
+    modal.style.display = 'none';
+  }
+
+
+  init(true); // Initialiseer de slotmachine bij het laden van de pagina met resetMode ingesteld op true
 
 })();

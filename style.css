@@ -184,34 +184,10 @@ body {
 }
 
 
-.confetti-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 9999; /* Zorg ervoor dat de confetti bovenop alles wordt weergegeven */
-}
 
-.modal-content {
-  width: 60%;
-  max-width: calc(80% - 20px);
-  height: 480px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.6);
-}
-
-.modal-content  {
-  text-align: center;
-}
 
 @media screen and (min-width: 768px) {
-  .modal-content {
-    width: 80%;
-    margin-bottom: 20px;
-  }
+
   .doors {
     transform: translateY(-150%); /* Centreren verticaal */
     max-width: 60%;
@@ -236,10 +212,7 @@ body {
     background-repeat: no-repeat; /* Voorkom herhaling van de achtergrond op mobiel */
     background-attachment: fixed;
   }
-  .modal-content {
-    width: 80%;
-    margin-bottom: 20px;
-  }
+  
 }
 
 .tabbar {
