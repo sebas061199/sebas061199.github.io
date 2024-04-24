@@ -59,7 +59,7 @@
 @media screen and (max-width: 925px) {
     #location-card-container {
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Aangepaste kolombreedte voor grotere schermen */
-        padding-left: 25px;
+        padding-left: 40px;
     }
 
     .location-card {
