@@ -121,7 +121,7 @@ body {
 /* Responsive aanpassingen */
 @media screen and (max-width: 768px) {
   .doors {
-    transform: translateY(-50%); /* Centreren verticaal */
+    transform: translateY(-100%); /* Centreren verticaal */
   }
   .dropdown {
       width: 100%; /* Volledige breedte op kleinere schermen */
@@ -206,7 +206,7 @@ body {
     margin-bottom: 20px;
   }
   .doors {
-    transform: translateY(-50%); /* Centreren verticaal */
+    transform: translateY(-150%); /* Centreren verticaal */
     max-width: 60%;
   }
   .buttons {
