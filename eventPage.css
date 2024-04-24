@@ -35,7 +35,7 @@
 @media screen and (max-width: 925px) {
     #event-card-container {
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Aangepaste kolombreedte voor grotere schermen */
-        padding-left: 30px;
+        padding-left: 25px;
     }
 
     .event-card {
