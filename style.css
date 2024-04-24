@@ -26,10 +26,8 @@ body {
 /* Dropdown styles */
 .dropdown {
   grid-area: dropdown;
-  position: fixed;
-  top: 40px;
+  bottom: 80px;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.6);
   width: 100%;
   z-index: 1000;
   border-top: 2px solid black; /* Toevoegen van zwarte border aan de bovenkant */
@@ -95,7 +93,6 @@ body {
 /* Dropdown triangle */
 .dropdown ul::before {
   content: ' ';
-  position: absolute;
   width: 0;
   height: 0;
   top: -10px;
@@ -114,7 +111,6 @@ body {
 .dropdown[open] > summary::before {
   content: ' ';
   display: block;
-  position: fixed;
   top: 0;
   right: 0;
   left: 0;
@@ -125,11 +121,12 @@ body {
 /* Responsive aanpassingen */
 @media screen and (max-width: 768px) {
   .doors {
-    top: 50%; /* Plaats het in het midden van het scherm */
     transform: translateY(-50%); /* Centreren verticaal */
   }
   .dropdown {
       width: 100%; /* Volledige breedte op kleinere schermen */
+      top: 2px;
+
   }
 
   .dropdown ul {
@@ -150,7 +147,7 @@ body {
 
 .weatherData-container {
   position: absolute;
-  top: 80px; /* Plaats het 100px onder de bovenkant van het scherm */
+  top: 40px; /* Plaats het 100px onder de bovenkant van het scherm */
   width: 100%;
   padding: 20px;
   border: 1px solid #ccc;
@@ -172,8 +169,6 @@ body {
 }
 
 .logo-header {
-  grid-area: header;
-  position: fixed;
   color: white;
   text-align: left;
   justify-items: center;
@@ -211,16 +206,24 @@ body {
     margin-bottom: 20px;
   }
   .doors {
-    top: calc(40% + 20px); /* Plaats het 100px onder het midden van het scherm */
     transform: translateY(-50%); /* Centreren verticaal */
+    max-width: 60%;
   }
   .buttons {
     bottom: calc(50% + 50px); /* Plaats de knoppen 50px boven het midden van het scherm */
     transform: translateY(50%); /* Centreren verticaal */
   }
+  .dropdown {
+      width: 100%; /* Volledige breedte op kleinere schermen */
+      top: 1px;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .doors{
+    width: 60%;
+  }
+
   body {
     background-size: cover; /* Voor mobiele apparaten, probeer 'contain' in plaats van 'cover' */
     background-repeat: no-repeat; /* Voorkom herhaling van de achtergrond op mobiel */
@@ -275,25 +278,14 @@ body {
   align-items: center;
   border-radius: 5px;
   border-color: black;
-  padding-bottom: 50px;
-  position: relative;
-  width: 100vw;
-  max-width: 100%;
-  height: auto;
+  padding-bottom: 100px;
   top: 80px; /* Plaats het 80px onder de bovenkant van het scherm */
 }
 
 .doors {
   width: 90%; /* Breedte instellen op 90% van de beschikbare ruimte */
-  padding: 20px; /* Padding instellen zoals bij location-card */
-  border: 1px solid #ccc; /* Rand instellen zoals bij location-card */
-  border-radius: 5px; /* Border-radius instellen zoals bij location-card */
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.6
-  ); /* Achtergrondkleur instellen zoals bij location-card */
+  border-radius: 10px; /* Border-radius instellen zoals bij location-card */
+  background-color: #db0a13; /* Achtergrondkleur instellen zoals bij location-card */
   margin: 20px auto; /* Marge instellen op auto om het centraal te positioneren */
   display: flex; /* Flexbox gebruiken voor layout */
   justify-content: space-between; /* Horizontaal verdelen van de inhoud */
@@ -319,6 +311,7 @@ body {
   height: 110px;
   border: 1px solid black;
   border-radius: 5px;
+  
 }
 
 .box {
@@ -329,28 +322,15 @@ body {
   border-radius: 5px;
 }
 
-.buttons {
-  display: flex;
-  justify-content: center; /* Horizontaal centreren van de inhoud */
-  align-items: flex-end; /* Verticaal onderaan uitlijnen van de inhoud */
-  position: absolute;
-  bottom: 10px;
-  left: 50%; /* In het midden van de locatiekaart */
-  transform: translateX(-50%); /* Horizontaal centreren */
-  width: auto; /* Breedte aanpassen aan de inhoud */
-  max-width: none; /* Geen maximale breedte instellen */
-}
 
 .buttons button {
   cursor: pointer;
   font-size: 1.2rem;
-  margin: 0 0.2rem;
   border: none;
   border-radius: 5px;
   padding: 10px 15px;
   color: white;
   background-color: #db0a13; /* Kleur instellen zoals bij de .location-card button */
-  z-index: 998;
 }
 
 
