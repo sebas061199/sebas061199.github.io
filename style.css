@@ -125,6 +125,7 @@ body {
   .dropdown {
       width: 100%; /* Volledige breedte op kleinere schermen */
       top: 2px;
+      z-index: 990;
 
   }
 
@@ -146,7 +147,7 @@ body {
 
 .weatherData-container {
   position: absolute;
-  top: 100px; /* Plaats het 100px onder de bovenkant van het scherm */
+  top: 90px; /* Plaats het 100px onder de bovenkant van het scherm */
   width: 100%;
   padding: 20px;
   border: 1px solid #ccc;
