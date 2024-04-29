@@ -146,7 +146,7 @@ body {
 
 .weatherData-container {
   position: absolute;
-  top: 40px; /* Plaats het 100px onder de bovenkant van het scherm */
+  top: 100px; /* Plaats het 100px onder de bovenkant van het scherm */
   width: 100%;
   padding: 20px;
   border: 1px solid #ccc;
