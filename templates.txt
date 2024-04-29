@@ -45,5 +45,6 @@ Json format:
   "name": "",
   "address": "",
   "photo": "",
-  "description": "\"\""
+  "description": "\"\"",
+  "category": ""
 }

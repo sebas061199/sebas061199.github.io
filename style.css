@@ -16,7 +16,6 @@ body {
   grid-template-areas:
     "header"
     "dropdown";
-  min-height: 100vh;
   margin: 0;
   background-image: url("./assets/toren.jpg");
   background-size: cover;
@@ -184,17 +183,18 @@ body {
 }
 
 
-
-
 @media screen and (min-width: 768px) {
-
+  .modal-content {
+    width: 80%;
+    margin-bottom: 20px;
+  }
   .doors {
-    transform: translateY(-150%); /* Centreren verticaal */
-    max-width: 60%;
+    transform: translateY(100%); /* Centreren verticaal */
+    width: 60%;
   }
   .buttons {
     bottom: calc(50% + 50px); /* Plaats de knoppen 50px boven het midden van het scherm */
-    transform: translateY(50%); /* Centreren verticaal */
+    transform: translateY(500%); /* Centreren verticaal */
   }
   .dropdown {
       width: 100%; /* Volledige breedte op kleinere schermen */
@@ -203,8 +203,13 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .doors{
-    width: 60%;
+  .doors {
+    transform: translateY(100%); /* Centreren verticaal */
+    max-width: 60%;
+  }
+  .buttons {
+    bottom: calc(50% + 50px); /* Plaats de knoppen 50px boven het midden van het scherm */
+    transform: translateY(500%); /* Centreren verticaal */
   }
 
   body {

@@ -318,6 +318,30 @@
           "photo": "thuis.jpg",
           "description": "\"De karaoke bar van Amersfoort\"",
           "category": "uitgaan"
+      },
+      {
+        "number": "41",
+        "name": "Café T'Koetje",
+        "address": "Hof 17A, 3811 CJ Amersfoort",
+        "photo": "koetje.jpg",
+        "description": "\"7 dagen per week gezelligheid\"",
+        "category": "uitgaan"
+      },
+      {
+        "number": "42",
+        "name": "Jackson classics & cocktails",
+        "address": "Groenmarkt 10, 3811 CP Amersfoort",
+        "photo": "jackson.jpg",
+        "description": "\"Dance classics & cocktails\"",
+        "category": "uitgaan"
+      },
+      {
+        "number": "43",
+        "name": "SHOTS!",
+        "address": "Lavendelstraat 5, 3811 CN Amersfoort",
+        "photo": "shots.jpg",
+        "description": "\"Grootste shotjesbar van Amersfoort\"",
+        "category": "uitgaan"
       }
   ]
 }

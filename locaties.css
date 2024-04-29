@@ -5,7 +5,7 @@
     justify-content: center;
     padding-top: 20px;
     padding-bottom: 80px;
-    padding-left: 40px;
+    padding-left: 30px;
 }
 
 .location-card {
@@ -48,7 +48,7 @@
 
 @media screen and (min-width: 768px) {
     #location-card-container {
-        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Aangepaste kolombreedte voor grotere schermen */
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Aangepaste kolombreedte voor grotere schermen */
     }
 
     .location-card {
@@ -56,10 +56,10 @@
     }
 }
 
-@media screen and (max-width: 925px) {
+@media screen and (max-width: 768px) {
     #location-card-container {
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Aangepaste kolombreedte voor grotere schermen */
-        padding-left: 30px;
+        padding-left: 55px;
         padding-top: 20px;
     }
 
