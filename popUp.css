@@ -1,7 +1,7 @@
 .modal {
   display: none;
   position: fixed;
-  z-index: 997; /* Verlaag de z-index van de modal */
+  z-index: 1100; /* Verlaag de z-index van de modal */
   left: 0;
   top: 0;
   height: 100%;
