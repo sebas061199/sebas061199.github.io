@@ -1,14 +1,3 @@
-
-
-.confetti-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 3000; /* Zorg ervoor dat de confetti bovenop alles wordt weergegeven */
-  display: block;
-}
 .modal {
   display: none;
   position: fixed;
@@ -25,8 +14,8 @@
   background-color: #fefefe;
   margin: 15% auto;
   border: 1px solid #888;
-  width: 30%; /* Pas de breedte van de modale inhoud aan */
-  height: 80%;
+  width: 40%; /* Pas de breedte van de modale inhoud aan */
+  height: 60%;
   align-items: center;
 }
 
@@ -35,7 +24,7 @@
   float: left;
   font-size: 28px;
   font-weight: bold;
-  padding-left: 250px;
+  padding-left: 350px;
 }
 
 
@@ -50,13 +39,14 @@
   .modal-content {
     width: 95%; /* Maak de breedte 95% van de beschikbare viewport breedte op mobiele apparaten */
     max-width: none; /* Verwijder de maximale breedte op mobiele apparaten */
+    height: 80%;
   }
   .close {
     color: black;
     float: left;
     font-size: 28px;
     font-weight: bold;
-    padding-left: 300px;
+    padding-left: 350px;
   }
   
 }
