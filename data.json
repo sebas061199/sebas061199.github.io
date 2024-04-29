@@ -14,7 +14,7 @@
           "address": "Utrechtseweg 76, 3818 EN Amersfoort",
           "photo": "marie.jpeg",
           "description": "\"Franse keuken met goede wijnen\"",
-          "category": ["cafe", "restaurant"]
+          "category": "restaurant"
       },
       {
           "number": "3",
@@ -38,7 +38,7 @@
           "address": "Groenmarkt 8, 3811 CP Amersfoort",
           "photo": "dikke-dirck.jpg",
           "description": "\"Bourgondisch Genieten\"",
-          "category": ["bar", "restaurant"]
+          "category": "bar"
       },
       {
           "number": "6",
@@ -54,7 +54,7 @@
           "address": "Hof 6, 3811 CJ Amersfoort",
           "photo": "lapart.png",
           "description": "\"Een Heel Lapart Café\"",
-          "category": ["bar", "uitgaan"]
+          "category": "uitgaan"
       },
       {
           "number": "8",
@@ -78,7 +78,7 @@
           "address": "Hof 16, 3811 CJ Amersfoort",
           "photo": "de-prof.jpg",
           "description": "\"Voor de lekkerste Cocktails & Bites\"",
-          "category": ["bar", "restaurant"]
+          "category": "bar"
       },
       {
           "number": "11",
@@ -86,7 +86,8 @@
           "address": "Hof 5, 3811 CJ Amersfoort",
           "photo": "alberts.jpg",
           "description": "\"Restaurant met eigen karakter\"",
-          "category": ["bar", "restaurant"]      },
+          "category": "bar"
+      },
       {
           "number": "12",
           "name": "Café Stu",
@@ -133,7 +134,7 @@
           "address": "Hof 25-26, 3811 CK Amersfoort",
           "photo": "miles.jpg",
           "description": "\"Het livemuziekcafé van Amersfoort\"",
-          "category": ["bar", "uitgaan"]
+          "category":  "uitgaan"
       },
       {
           "number": "18",
@@ -141,7 +142,7 @@
           "address": "Hof 7, 3811 CJ Amersfoort",
           "photo": "curtis.jpg",
           "description": "\"Het gezelligste café van Amersfoort\"",
-          "category": ["bar", "uitgaan"]
+          "category": "bar"
       },
       {
           "number": "19",
@@ -157,7 +158,7 @@
           "address": "Lieve Vrouwestraat 14, 3811 BR Amersfoort",
           "photo": "annes-bar.jpg",
           "description": "\"All day streetfood\"",
-          "category": ["bar", "restaurant"]
+          "category":  "restaurant"
       },
       {
           "number": "21",
@@ -165,7 +166,7 @@
           "address": "Hof 36, 3811 CK Amersfoort",
           "photo": "gaudi.jpg",
           "description": "\"Sfeervolle Spaanse ambiance\"",
-          "category": ["bar", "restaurant"]
+          "category":  "restaurant"
       },
       {
           "number": "22",
@@ -189,7 +190,7 @@
           "address": "Langestraat 76, 3811 AJ Amersfoort",
           "photo": "nul33.jpg",
           "description": "\"Eten, drinken & genieten\"",
-          "category": ["cafe", "restaurant"]
+          "category":  "restaurant"
       },
       {
           "number": "25",
@@ -205,7 +206,7 @@
           "address": "Hof 8, 3811 CJ Amersfoort",
           "photo": "gastro.jpg",
           "description": "\"Genieten van heerlijke gerechten en geweldige wijnen\"",
-          "category": ["bar", "restaurant"]
+          "category": "bar"
       },
       {
           "number": "27",
@@ -221,7 +222,7 @@
           "address": "Lieve Vrouwekerkhof 3, 3811 BS Amersfoort",
           "photo": "stadscafe.jpg",
           "description": "\"Lunch, borrelen en dineren in hartje Amersfoort\"",
-          "category": ["bar", "restaurant"]
+          "category": "bar"
       },
       {
           "number": "29",
@@ -277,7 +278,7 @@
           "address": "Mijnbouwweg 15, 3812 RT Amersfoort",
           "photo": "rock-city.jpg",
           "description": "\"Een smaakvol avontuur\"",
-          "category": ["bar", "restaurant"]
+          "category": "bar"
       },
       {
           "number": "36",
@@ -285,7 +286,7 @@
           "address": "Hof 18, 3811 CJ Amersfoort",
           "photo": "jd.png",
           "description": "\"Een warm welkom en gemoedelijke sfeer\"",
-          "category": ["bar", "uitgaan"]
+          "category": "bar"
       },
       {
           "number": "37",
