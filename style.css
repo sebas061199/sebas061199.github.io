@@ -16,7 +16,6 @@ body {
   grid-template-areas:
     "header"
     "dropdown";
-  min-height: 100vh;
   margin: 0;
   background-image: url("./assets/toren.jpg");
   background-size: cover;
@@ -184,41 +183,18 @@ body {
 }
 
 
-.confetti-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 9999; /* Zorg ervoor dat de confetti bovenop alles wordt weergegeven */
-}
-
-.modal-content {
-  width: 60%;
-  max-width: calc(80% - 20px);
-  height: 480px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.6);
-}
-
-.modal-content  {
-  text-align: center;
-}
-
 @media screen and (min-width: 768px) {
   .modal-content {
     width: 80%;
     margin-bottom: 20px;
   }
   .doors {
-    transform: translateY(-150%); /* Centreren verticaal */
-    max-width: 60%;
+    transform: translateY(100%); /* Centreren verticaal */
+    width: 60%;
   }
   .buttons {
     bottom: calc(50% + 50px); /* Plaats de knoppen 50px boven het midden van het scherm */
-    transform: translateY(50%); /* Centreren verticaal */
+    transform: translateY(500%); /* Centreren verticaal */
   }
   .dropdown {
       width: 100%; /* Volledige breedte op kleinere schermen */
@@ -227,8 +203,13 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .doors{
-    width: 60%;
+  .doors {
+    transform: translateY(100%); /* Centreren verticaal */
+    max-width: 60%;
+  }
+  .buttons {
+    bottom: calc(50% + 50px); /* Plaats de knoppen 50px boven het midden van het scherm */
+    transform: translateY(500%); /* Centreren verticaal */
   }
 
   body {
@@ -236,10 +217,7 @@ body {
     background-repeat: no-repeat; /* Voorkom herhaling van de achtergrond op mobiel */
     background-attachment: fixed;
   }
-  .modal-content {
-    width: 80%;
-    margin-bottom: 20px;
-  }
+  
 }
 
 .tabbar {
