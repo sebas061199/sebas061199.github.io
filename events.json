@@ -47,6 +47,22 @@
             "photo": "proef.jpg",
             "description" : "\"Voor de smaakavonturiers\"",
             "duration": ["2024-05-08", "2024-05-12"] 
+        },
+        {
+            "id" : "7",
+            "name": "Snuffelmarkt",
+            "location" : "Eemplein",
+            "photo": "proef.jpg",
+            "description" : "\"Voor ieder wat leuks\"",
+            "duration": ["2024-01-6", "2024-01-6"] 
+        },
+        {
+            "id" : "8",
+            "name": "Keti Koti",
+            "location" : "Lieve Vrouwekerkhof",
+            "photo": "keti.jpg",
+            "description" : "\"Herdenking afschaffing slavernij\"",
+            "duration": ["2024-05-02", "2024-05-02"] 
         }
     ]
 }

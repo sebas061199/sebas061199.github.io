@@ -21,6 +21,12 @@ function loadDataAndUpdateLinkAndCreateEventCards() {
 
 // Function to create event cards
 function createEventCard(event) {
+    // Check if event date is in the future
+    if (new Date(event.duration[0]) < new Date()) {
+        // Event date has passed, do not create event card
+        return;
+    }
+
     // Create a new div element for the event card
     var eventCard = document.createElement("div");
     eventCard.classList.add("event-card");
@@ -28,8 +34,7 @@ function createEventCard(event) {
     var photoSrc = event.photo !== '' ? 'assets/' + event.photo : 'assets/no-image.png';
     eventCard.innerHTML = `
         <h2>${event.name}</h2>
-        <img src="${photoSrc}" alt="${event.name
-        }" class="event-photo">
+        <img src="${photoSrc}" alt="${event.name}" class="event-photo">
         <p>Locatie: ${event.location}</p>
         <p>${event.description}</p>
         <p>Datum: ${event.duration.join(' - ')}</p>
