@@ -8,8 +8,11 @@ function loadDataAndUpdateLinkAndCreateEventCards() {
             return response.json();
         })
         .then((data) => {
-            // Create event cards based on the JSON data
-            data.events.forEach((event) => {
+            // Sorteer de events op basis van de startdatum
+            const sortedEvents = data.events.sort((a, b) => new Date(a.duration[0]) - new Date(b.duration[0]));
+
+            // Maak event cards op basis van de gesorteerde JSON-gegevens
+            sortedEvents.forEach((event) => {
                 createEventCard(event);
             });
         })
@@ -22,17 +25,20 @@ function createEventCard(event) {
     var eventCard = document.createElement("div");
     eventCard.classList.add("event-card");
 
+    var photoSrc = event.photo !== '' ? 'assets/' + event.photo : 'assets/no-image.png';
     eventCard.innerHTML = `
         <h2>${event.name}</h2>
+        <img src="${photoSrc}" alt="${event.name
+        }" class="event-photo">
         <p>Locatie: ${event.location}</p>
         <p>${event.description}</p>
         <p>Datum: ${event.duration.join(' - ')}</p>
     `;
 
-    // Add the event card to the card container
+    // Voeg de event card toe aan de card container
     var eventCardContainer = document.getElementById("event-card-container");
     eventCardContainer.appendChild(eventCard);
 }
 
-// Call the function to load data and create event cards
+// Roep de functie aan om gegevens te laden en event cards te maken
 loadDataAndUpdateLinkAndCreateEventCards();

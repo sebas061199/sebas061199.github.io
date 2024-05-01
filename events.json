@@ -4,6 +4,7 @@
             "id" : "1",
             "name": "Into The Woods",
             "location" : "Openluchttheater Amersfoort",
+            "photo": "itw.jpg",
             "description" : "\"Thuisfront NK kaakschaatsen\"",
             "duration": ["2024-09-20", "2024-09-21"]
         },
@@ -11,8 +12,41 @@
             "id" : "2",
             "name": "Amesfoortse Pracht",
             "location" : "Openluchttheater Amersfoort",
+            "photo": "pracht.jpg",
             "description" : "\"Oergezellig uitbrakken\"",
             "duration": ["2024-09-22"] 
+        },
+        {
+            "id" : "3",
+            "name": "Festifoort Outdoor",
+            "location" : "Mijnbouweg Amersfoort",
+            "photo": "festifoort.jpg",
+            "description" : "\"Zonnig festival\"",
+            "duration": ["2024-06-29"] 
+        },
+        {
+            "id" : "4",
+            "name": "Lepeltje Lepeltje",
+            "location" : "Burg. Brouwerplantsoen Amersfoort",
+            "photo": "lepel.jpg",
+            "description" : "\"Foodtruck festival\"",
+            "duration": ["2024-05-17", "2024-05-20"] 
+        },
+        {
+            "id" : "5",
+            "name": "Foodfestival Amersfoort",
+            "location" : "Burg. Brouwerplantsoen Amersfoort",
+            "photo": "lepel.jpg",
+            "description" : "\"Foodtruck festival\"",
+            "duration": ["2024-08-12", "2024-08-25"] 
+        },
+        {
+            "id" : "6",
+            "name": "Proef Amersfoort",
+            "location" : "De Nieuwe Stad Amersfoort",
+            "photo": "proef.jpg",
+            "description" : "\"Voor de smaakavonturiers\"",
+            "duration": ["2024-05-08", "2024-05-12"] 
         }
     ]
 }

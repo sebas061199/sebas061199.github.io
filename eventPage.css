@@ -1,23 +1,43 @@
+@font-face {
+    font-family: 'Canter-bold';
+    src: url('./fonts/Canter-Bold.ttf');
+}
+
 #event-card-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Aangepaste kolombreedte */
     gap: 20px;
     justify-content: center;
-    padding-top: 120px;
+    padding-top: 20px;
     padding-bottom: 80px;
-    padding-left: 100px;
+    padding-left: 30px;
 }
 
 .event-card {
     position: relative;
-
     height: 480px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
+.event-card h2{
+    color:#db0a13;
+    font-family: 'Canter-bold';
+    font-size: 40px;
+}
+
+.event-card img {
+    max-width: 90%;
+    max-height: 200px;
+    margin-bottom: 10px;
+    justify-content: center;
+}
 .event-card-content {
     text-align: center;
 }
@@ -32,28 +52,17 @@
     }
 }
 
-@media screen and (max-width: 925px) {
+@media screen and (max-width: 768px) {
     #event-card-container {
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Aangepaste kolombreedte voor grotere schermen */
-        padding-left: 25px;
+        padding-left: 55px;
+        padding-top: 20px;
     }
 
     .event-card {
         width: calc(90% - 20px); /* Breng de vaste breedte terug */
     }
+    .event-card img {
+        width: 100%;
+    }
 }
-
-button {
-    cursor: pointer;
-    font-size: 1.2rem;
-    margin: 0 0.2rem;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    color: white;
-    background-color: #db0a13;
-    margin-top: 20px; /* Verlaag de bovenmarge om de knop dichter bij de inhoud te brengen */
-    z-index: 1001; /* Zorg ervoor dat de knop boven andere elementen ligt */
-    position: relative; /* Behoud de positie van de knop binnen zijn container */
-  }
-  

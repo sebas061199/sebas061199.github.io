@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'Canter-bold';
+    src: url('./fonts/Canter-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Canter-light';
+    src: url('./fonts/Canter-Light.ttf');
+}
+
 #location-card-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Aangepaste kolombreedte */
@@ -21,6 +31,15 @@
     align-items: flex-start; /* Plaats de inhoud links uitgelijnd */
 }
 
+.location-card h2{
+    color:#db0a13;
+    font-family: 'Canter-bold';
+    font-size: 40px;
+}
+
+.location-card img {
+    width: 100%;
+}
 
 .location-card-content {
     text-align: center;
@@ -65,6 +84,9 @@
 
     .location-card {
         width: calc(90% - 20px); /* Breng de vaste breedte terug */
+    }
+    .location-card img {
+        width: 100%;
     }
 }
 
