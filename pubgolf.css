@@ -21,9 +21,71 @@
     background-attachment: fixed;
   }
 
+  #app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border-color: black;
+    padding-bottom: 100px;
+    top: 80px; /* Plaats het 80px onder de bovenkant van het scherm */
+  }
+  
+  .doors {
+    width: 90%; /* Breedte instellen op 90% van de beschikbare ruimte */
+    border-radius: 10px; /* Border-radius instellen zoals bij location-card */
+    background-color: #db0a13; /* Achtergrondkleur instellen zoals bij location-card */
+    margin: 20px auto; /* Marge instellen op auto om het centraal te positioneren */
+    display: flex; /* Flexbox gebruiken voor layout */
+    justify-content: space-between; /* Horizontaal verdelen van de inhoud */
+    align-items: center; /* Verticaal centreren van de inhoud */
+    position: relative; /* Relatieve positionering voor absolute positionering van de buttons */
+  }
+  
+  .door {
+    background-color: white; /* Pas de achtergrondkleur aan met een alpha-waarde */
+    width: 100%;
+    height: 110px;
+    overflow: hidden;
+    border-radius: 5px;
+    margin: 5px;
+    border-color: #db0a13;
+  }
+  
+  .boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centreren van de elementen verticaal */
+    font-size: 3rem;
+    height: 110px;
+    border: 1px solid black;
+    border-radius: 5px;
+    
+  }
+  
+  .box {
+    background-color: white;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  
+  .buttons button {
+    cursor: pointer;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    color: white;
+    background-color: #db0a13; /* Kleur instellen zoals bij de .location-card button */
+  }
+
 .weatherData-container {
     position: absolute;
-    top: 90px; /* Plaats het 100px onder de bovenkant van het scherm */
+    top: 40px; /* Plaats het 100px onder de bovenkant van het scherm */
     width: 100%;
     padding: 20px;
     border: 1px solid #ccc;
