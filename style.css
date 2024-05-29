@@ -191,7 +191,6 @@ body {
   }
   .doors {
     transform: translateY(100%); /* Centreren verticaal */
-    width: 60%;
   }
   .buttons {
     bottom: calc(50% + 50px); /* Plaats de knoppen 50px boven het midden van het scherm */
@@ -269,7 +268,6 @@ body {
 }
 
 .doors {
-  width: 90%; /* Breedte instellen op 90% van de beschikbare ruimte */
   border-radius: 10px; /* Border-radius instellen zoals bij location-card */
   background-color: #db0a13; /* Achtergrondkleur instellen zoals bij location-card */
   margin: 20px auto; /* Marge instellen op auto om het centraal te positioneren */
@@ -281,7 +279,7 @@ body {
 
 .door {
   background-color: white; /* Pas de achtergrondkleur aan met een alpha-waarde */
-  width: 100%;
+  width: 425px;
   height: 110px;
   overflow: hidden;
   border-radius: 5px;
