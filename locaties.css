@@ -37,10 +37,6 @@
     font-size: 40px;
 }
 
-.location-card img {
-    width: 100%;
-}
-
 .location-card-content {
     text-align: center;
 }
@@ -85,7 +81,7 @@
         width: calc(90% - 20px); /* Breng de vaste breedte terug */
     }
     .location-card img {
-        width: 100%;
+        width: 50%;
     }
 }
 
