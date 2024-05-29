@@ -1,0 +1,52 @@
+{
+    "locaties": [
+        {
+            "number": "1",
+            "name": "Café De Prins",
+            "address": "Hof 31, 3811CK Amersfoort",
+            "photo": "de-prins.png",
+            "description": "\"Gezellige kroeg met Nederlandse muziek\"",
+            "category": "bar"
+        },
+        {
+            "number": "2",
+            "name": "Boothill Saloon",
+            "address": "Krankeledenstraat 16, 3811 BN Amersfoort",
+            "photo": "boothill.jpg",
+            "description": "\"Amerikaanse kroeg met Amerikaanse bieren\"",
+            "category": "bar"
+        },
+        {
+            "number": "3",
+            "name": "Dikke Dirck",
+            "address": "Groenmarkt 8, 3811 CP Amersfoort",
+            "photo": "dikke-dirck.jpg",
+            "description": "\"Bourgondisch Genieten\"",
+            "category": "bar"
+        },
+        {
+            "number": "4",
+            "name": "Tjommies Music Bar",
+            "address": "Lavendelstraat 13, 3811 CN Amersfoort",
+            "photo": "tjommies.jpeg",
+            "description": "\"Cocktails en goede muziek\"",
+            "category": "bar"
+        },
+        {
+            "number": "5",
+            "name": "Muziekcafé Pitchers",
+            "address": "Groenmarkt 7, 3811 CP Amersfoort",
+            "photo": "pitchers.png",
+            "description": "\"Het leukste sportcafé\"",
+            "category": "bar"
+        },
+        {
+            "number": "6",
+            "name": "Muziekcafé Pitchers",
+            "address": "Groenmarkt 7, 3811 CP Amersfoort",
+            "photo": "pitchers.png",
+            "description": "\"Het leukste sportcafé\"",
+            "category": "bar"
+        }
+    ]
+}
