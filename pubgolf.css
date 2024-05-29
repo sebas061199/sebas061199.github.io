@@ -1,0 +1,196 @@
+:root {
+    --button-background: #ccc;
+    --button-color: white;
+    
+    --dropdown-highlight: #ccc;
+    --dropdown-width: 160px;
+    --dropdown-background: white;
+    --dropdown-color: black;
+    --dropdown-item-height: 50px; /* Nieuwe variabele voor de hoogte van de lijstitems */
+  }
+  
+  /* Center the planet */
+  body {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "dropdown";
+    margin: 0;
+    background-image: url("./assets/toren.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  #app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border-color: black;
+    padding-bottom: 100px;
+    top: 80px; /* Plaats het 80px onder de bovenkant van het scherm */
+  }
+  
+  .doors {
+    width: 90%; /* Breedte instellen op 90% van de beschikbare ruimte */
+    border-radius: 10px; /* Border-radius instellen zoals bij location-card */
+    background-color: #db0a13; /* Achtergrondkleur instellen zoals bij location-card */
+    margin: 20px auto; /* Marge instellen op auto om het centraal te positioneren */
+    display: flex; /* Flexbox gebruiken voor layout */
+    justify-content: space-between; /* Horizontaal verdelen van de inhoud */
+    align-items: center; /* Verticaal centreren van de inhoud */
+    position: relative; /* Relatieve positionering voor absolute positionering van de buttons */
+  }
+  
+  .door {
+    background-color: white; /* Pas de achtergrondkleur aan met een alpha-waarde */
+    width: 100%;
+    height: 110px;
+    overflow: hidden;
+    border-radius: 5px;
+    margin: 5px;
+    border-color: #db0a13;
+  }
+  
+  .boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centreren van de elementen verticaal */
+    font-size: 3rem;
+    height: 110px;
+    border: 1px solid black;
+    border-radius: 5px;
+    
+  }
+  
+  .box {
+    background-color: white;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  
+  .buttons button {
+    cursor: pointer;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    color: white;
+    background-color: #db0a13; /* Kleur instellen zoals bij de .location-card button */
+  }
+
+.weatherData-container {
+    position: absolute;
+    top: 40px; /* Plaats het 100px onder de bovenkant van het scherm */
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .weatherIcon {
+    position: relative; /* Absoluut positioneren */
+  }
+  
+  .weatherData {
+    position: absolute; /* Absoluut positioneren */
+    left: 80px; /* Naast weatherIcon */
+    top: 50%; /* Verticaal gecentreerd */
+    transform: translateY(-50%); /* Correctie om verticaal te centreren */
+    color: black;
+    font-size: 25px;
+  }
+
+.logo-header {
+    color: white;
+    text-align: left;
+    justify-items: center;
+    padding-left: 20px;
+    background-color: #db0a13;
+    background-size: cover;
+    background-attachment: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    z-index: 1000;
+  }
+  
+  
+  @media screen and (min-width: 768px) {
+    .modal-content {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+    .doors {
+      transform: translateY(100%); /* Centreren verticaal */
+      width: 60%;
+    }
+    .buttons {
+      bottom: calc(50% + 50px); /* Plaats de knoppen 50px boven het midden van het scherm */
+      transform: translateY(500%); /* Centreren verticaal */
+    }
+    .dropdown {
+        width: 100%; /* Volledige breedte op kleinere schermen */
+        top: 1px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .doors {
+      transform: translateY(100%); /* Centreren verticaal */
+      max-width: 60%;
+    }
+    .buttons {
+      bottom: calc(50% + 50px); /* Plaats de knoppen 50px boven het midden van het scherm */
+      transform: translateY(500%); /* Centreren verticaal */
+    }
+  
+    body {
+      background-size: cover; /* Voor mobiele apparaten, probeer 'contain' in plaats van 'cover' */
+      background-repeat: no-repeat; /* Voorkom herhaling van de achtergrond op mobiel */
+      background-attachment: fixed;
+    }
+    
+  }
+  
+  .tabbar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-items: center;
+    background-color: #db0a13;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .tabbar-container {
+    padding-bottom: 100px;
+  }
+  
+  .tab-button {
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .tab-button svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .tab-button span {
+    font-size: 10px;
+    color: white;
+  }
