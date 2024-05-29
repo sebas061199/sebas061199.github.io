@@ -52,7 +52,7 @@
 @media screen and (max-width: 768px) {
     #event-card-container {
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Aangepaste kolombreedte voor grotere schermen */
-        padding-left: 55px;
+        padding-left: 50px;
         padding-top: 20px;
     }
 
