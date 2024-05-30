@@ -13,7 +13,7 @@
 .modal-content {
   background-color: #fefefe;
   margin: 15% auto;
-  border: 1px solid #888;
+  border: 1px solid black;
   width: 40%; /* Pas de breedte van de modale inhoud aan */
   height: 60%;
   align-items: center;
