@@ -19,7 +19,7 @@ async function fetchWeatherData(city) {
 
 // Example usage:
 const city = "Amersfoort";
-fetchWeatherData(city)  
+fetchWeatherData(city)
     .then(data => {
         console.log(city, ":", data);
         const temperature = data.current.temp_c;
